@@ -1,0 +1,17 @@
+uuid: dbf9d873-f264-4bfa-93db-aceea0b34a93
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Vendor
+type: vendor
+description: 'Information about a vendor.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
