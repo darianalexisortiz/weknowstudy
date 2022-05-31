@@ -1,0 +1,28 @@
+uuid: 668f4041-bff0-4ceb-a603-23aa94bfe20e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact_web
+    - field.field.contact_message.contact_web.field_products_interested
+id: contact_message.contact_web.default
+targetEntityType: contact_message
+bundle: contact_web
+mode: default
+content:
+  field_products_interested:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  message:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

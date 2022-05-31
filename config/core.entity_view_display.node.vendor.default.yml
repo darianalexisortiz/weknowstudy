@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.vendor.body
+    - field.field.node.vendor.field_main_image
+    - field.field.node.vendor.field_vendor_url
+    - image.style.extra_medium
     - node.type.vendor
   module:
+    - image
+    - link
     - text
     - user
 id: node.vendor.default
@@ -18,11 +23,33 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
+    region: content
+  field_main_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: extra_medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_vendor_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
-hidden: {  }
+hidden:
+  langcode: true

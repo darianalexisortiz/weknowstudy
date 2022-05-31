@@ -1,0 +1,22 @@
+uuid: 34460978-de91-4e39-a3dd-94764eba180c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: vendor
+label: Vendor
+type: 'canonical_entities:node'
+pattern: 'vendor/[node:title]'
+selection_criteria:
+  5a99496c-b74f-45f0-b903-a5e59fe3c76c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 5a99496c-b74f-45f0-b903-a5e59fe3c76c
+    context_mapping:
+      node: node
+    bundles:
+      vendor: vendor
+selection_logic: and
+weight: -5
+relationships: {  }

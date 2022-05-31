@@ -1,0 +1,12 @@
+uuid: 067c217d-cdb0-40b7-99c0-6830227e8416
+langcode: en
+status: true
+dependencies: {  }
+id: contact_web
+label: 'Website Contact '
+recipients:
+  - dortiz@weknowinc.com
+reply: 'Your message was received, thank you for writing to us. We will contact you as soon as possible.'
+weight: 0
+message: 'Thank you for writing to us. We will contact you as soon as possible.'
+redirect: /home

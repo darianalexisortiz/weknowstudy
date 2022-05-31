@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.vendor.body
+    - field.field.node.vendor.field_main_image
+    - field.field.node.vendor.field_vendor_url
+    - image.style.thumbnail
     - node.type.vendor
   module:
+    - image
+    - link
     - path
     - text
 id: node.vendor.default
@@ -28,6 +33,29 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_main_image:
+    type: image_image
+    weight: 123
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_vendor_url:
+    type: link_default
+    weight: 122
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path

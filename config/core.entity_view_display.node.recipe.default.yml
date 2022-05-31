@@ -4,8 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.recipe.body
+    - field.field.node.recipe.field_ingredients
+    - field.field.node.recipe.field_main_image
+    - field.field.node.recipe.field_media
+    - field.field.node.recipe.field_submitted_by
+    - image.style.extra_medium
     - node.type.recipe
   module:
+    - image
+    - media
     - text
     - user
 id: node.recipe.default
@@ -18,11 +25,46 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
+    region: content
+  field_ingredients:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_main_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: extra_medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_submitted_by:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
-hidden: {  }
+hidden:
+  langcode: true

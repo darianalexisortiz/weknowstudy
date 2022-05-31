@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.recipe.body
+    - field.field.node.recipe.field_ingredients
+    - field.field.node.recipe.field_main_image
+    - field.field.node.recipe.field_media
+    - field.field.node.recipe.field_submitted_by
     - node.type.recipe
   module:
     - text
@@ -27,4 +31,9 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_ingredients: true
+  field_main_image: true
+  field_media: true
+  field_submitted_by: true
+  langcode: true
