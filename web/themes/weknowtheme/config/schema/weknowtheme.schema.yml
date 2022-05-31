@@ -1,0 +1,8 @@
+# Schema for the configuration files of the weKnow theme theme.
+weknowtheme.settings:
+  type: theme_settings
+  label: 'weKnow theme settings'
+  mapping:
+    font_size:
+      type: integer
+      label: Font size
