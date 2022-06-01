@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_cta_link
     - field.field.node.landing_page.field_cta_text
@@ -14,6 +15,7 @@ dependencies:
     - views.view.recipes
   module:
     - ctools
+    - custom_layouts
     - image
     - layout_builder
     - layout_builder_restrictions
@@ -80,7 +82,7 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: text_default
-                label: visually_hidden
+                label: above
                 settings: {  }
                 third_party_settings: {  }
             weight: 0
@@ -91,17 +93,65 @@ third_party_settings:
             configuration:
               id: 'views_block:recipes-block_1'
               label: ''
-              label_display: '0'
+              label_display: visible
               provider: views
               context_mapping: {  }
               views_label: ''
               items_per_page: none
-              arguments:
-                nid:
-                  type: node_nid
-                  value: '7'
             weight: 1
             additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: custom_layouts_three_column_25_50_25
+        layout_settings:
+          label: 'Footer content'
+          context_mapping: {  }
+        components:
+          55540c98-73c6-41a1-9790-14310a75e5e9:
+            uuid: 55540c98-73c6-41a1-9790-14310a75e5e9
+            region: first
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Warning Block'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 4
+              block_serialized: null
+            weight: 0
+            additional:
+              layout_builder_styles_style: warning
+          72896ee7-47e9-49b9-8831-fa96935580a3:
+            uuid: 72896ee7-47e9-49b9-8831-fa96935580a3
+            region: second
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Content 2'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 6
+              block_serialized: null
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          ee244633-8a08-4f89-83bd-f9c2c6efc416:
+            uuid: ee244633-8a08-4f89-83bd-f9c2c6efc416
+            region: third
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Content 3'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 7
+              block_serialized: null
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -120,7 +170,6 @@ third_party_settings:
           - 'views_block:recipes-block_1'
       restricted_categories:
         - '@entity'
-        - 'Custom block types'
         - 'Custom blocks'
         - Forms
         - Help

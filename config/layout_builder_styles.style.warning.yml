@@ -1,0 +1,12 @@
+uuid: 8c1eb147-3653-4c23-bad7-ef956f17818d
+langcode: en
+status: true
+dependencies: {  }
+id: warning
+label: Warning
+classes: "messages\r\nmessages--error"
+type: component
+block_restrictions:
+  - 'inline_block:basic'
+layout_restrictions: {  }
+weight: 0
