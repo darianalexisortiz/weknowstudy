@@ -1,0 +1,25 @@
+uuid: 465cbcd2-1df0-42dd-962e-5c562c14721c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0f6d0b93-349f-47c2-a36f-6ddbbab542a1'
+  module:
+    - block_content
+  theme:
+    - weknowtheme
+id: weknowtheme_hoursandlocationblock
+theme: weknowtheme
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'block_content:0f6d0b93-349f-47c2-a36f-6ddbbab542a1'
+settings:
+  id: 'block_content:0f6d0b93-349f-47c2-a36f-6ddbbab542a1'
+  label: 'Hours and location'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

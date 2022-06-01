@@ -1,0 +1,22 @@
+uuid: 216353b8-a980-40dd-a31c-32387a43cfe1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - weknowtheme
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: weknowtheme_content
+theme: weknowtheme
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

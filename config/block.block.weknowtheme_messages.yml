@@ -1,0 +1,22 @@
+uuid: 891b9211-9c9a-4e0f-9768-e5123a12263b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - weknowtheme
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: weknowtheme_messages
+theme: weknowtheme
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

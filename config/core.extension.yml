@@ -5,6 +5,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  block_list_override: 0
   breakpoint: 0
   ckeditor: 0
   color: 0
@@ -14,6 +15,9 @@ module:
   contact: 0
   contextual: 0
   ctools: 0
+  ctools_block: 0
+  ctools_views: 0
+  custom_layouts: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -27,6 +31,9 @@ module:
   image: 0
   language: 0
   layout_builder: 0
+  layout_builder_modal: 0
+  layout_builder_restrictions: 0
+  layout_builder_styles: 0
   layout_discovery: 0
   link: 0
   locale: 0
@@ -59,4 +66,5 @@ module:
 theme:
   bartik: 0
   seven: 0
+  weknowtheme: 0
 profile: standard

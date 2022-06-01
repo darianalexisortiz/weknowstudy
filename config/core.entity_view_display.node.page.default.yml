@@ -11,6 +11,7 @@ dependencies:
     - node.type.page
   module:
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - text
     - user
@@ -112,6 +113,18 @@ third_party_settings:
             weight: 1
             additional: {  }
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_onecol
+        - layout_threecol_section
+        - layout_fourcol_section
+      blacklisted_blocks:
+        'Listas (Views)':
+          - 'views_block:comments_recent-block_1'
+      whitelisted_blocks: {  }
+      restricted_categories: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default

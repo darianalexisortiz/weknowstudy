@@ -1,0 +1,78 @@
+uuid: f3ba4951-8011-4595-a6ca-f7559c23e4be
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.cta
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_cta_link
+    - field.field.node.landing_page.field_cta_text
+    - field.field.node.landing_page.field_hero_image
+    - field.field.node.landing_page.field_hero_text
+    - field.field.node.landing_page.field_related_recipes
+    - field.field.node.landing_page.layout_builder__layout
+    - node.type.landing_page
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_twocol_section
+      blacklisted_blocks: {  }
+      whitelisted_blocks:
+        'Chaos Tools':
+          - 'entity_view:node'
+      restricted_categories:
+        - '@entity'
+        - 'Content fields'
+        - 'Custom block types'
+        - 'Custom blocks'
+        - Forms
+        - Help
+        - 'Inline blocks'
+        - 'Lists (Views)'
+        - Menus
+        - System
+        - User
+        - core
+id: node.landing_page.cta
+targetEntityType: node
+bundle: landing_page
+mode: cta
+content:
+  field_cta_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_hero_image: true
+  field_hero_text: true
+  field_related_recipes: true
+  langcode: true
+  layout_builder__layout: true
+  links: true

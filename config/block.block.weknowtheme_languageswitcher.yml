@@ -1,0 +1,20 @@
+uuid: 4079e8e3-133a-43ae-a22b-690823965a92
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - weknowtheme
+id: weknowtheme_languageswitcher
+theme: weknowtheme
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility: {  }

@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: G8QQmvYdIX4fGt1SxVZIFa0KjWFS4FbLlNlt6N19qIM
+system_match: ''
+system_prefix: ''
+system_regex: ''
+system_negate: false
+layout_match: "system_powered_by_block\r\n"
+layout_prefix: ''
+layout_regex: ''
+layout_negate: false

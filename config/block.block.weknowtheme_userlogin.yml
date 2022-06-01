@@ -1,0 +1,20 @@
+uuid: 587d2546-04a7-47e0-8dd1-6f10d5c0374f
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - weknowtheme
+id: weknowtheme_userlogin
+theme: weknowtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: visible
+  provider: user
+visibility: {  }
