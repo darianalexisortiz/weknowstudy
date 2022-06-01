@@ -23,10 +23,12 @@ global:
     theme:
       css/theme/print.css: { media: print }
 node.cta:
+  version: 0.1
   css:
     component:
       templates/components/cta/cta.css: {}
 node.hero:
+  version: 0.1
   css:
     component:
       templates/components/hero/hero.css: {}
