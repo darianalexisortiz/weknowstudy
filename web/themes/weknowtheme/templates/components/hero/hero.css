@@ -1,6 +1,6 @@
 .hero .node__content {
   align-items: center;
-  border: 4px solid #0a6eb4;
+  border: 4px solid #922e46;
   border-top-width: 1px;
   border-left-width: 1px;
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .hero .node__content .field--name-field-hero-link a {
-  background: #0a6eb4;
+  background: #922e46;
   color: white;
   display: block;
   margin: 10px 0;
