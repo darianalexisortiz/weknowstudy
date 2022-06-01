@@ -64,7 +64,13 @@
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
-        }
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/ctools": {
+                "Manually pass an argument to a views block through interface": "https://www.drupal.org/files/issues/2022-05-22/2759445-86.patch"
+            }
+     }
     },
     "autoload": {
         "classmap": [
