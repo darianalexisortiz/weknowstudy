@@ -25,8 +25,8 @@ global:
 node.cta:
   css:
     component:
-      css/components/cta.scss: {}
+      templates/components/cta/cta.css: {}
 node.hero:
   css:
     component:
-      css/components/hero.scss: {}
+      templates/components/hero/hero.css: {}
