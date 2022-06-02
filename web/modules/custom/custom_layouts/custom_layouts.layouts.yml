@@ -14,3 +14,19 @@ custom_layouts_three_column_25_50_25:
   icon_map:
     - [first, second, third]
   library: custom_layouts/tabs
+custom_layouts_three_column_50_25_25:
+  label: 'Three column 50/25/25'
+  category: 'Columns: 3'
+  path: templates/layouts
+  class: '\Drupal\custom_layouts\Layout\ThreeColumnsLayoutClass'
+  template: custom-layouts--three-col-50-25-25
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+  default_region: second
+  icon_map:
+    - [first, second, third]
