@@ -1,0 +1,7 @@
+custom_layouts.form:
+  path: '/admin/structure/custom-layouts'
+  defaults:
+    _form: '\Drupal\custom_layouts\Form\LayoutConfigurationForm'
+    _title: 'Custom layouts configuration form'
+  requirements:
+    _permission: 'administer site configuration'

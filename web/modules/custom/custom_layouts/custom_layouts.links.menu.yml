@@ -1,0 +1,6 @@
+custom_layouts.form:
+  title: 'Custom layouts configuration'
+  parent: system.admin_structure
+  route_name: custom_layouts.form
+  weight: 100
+  menu_name: system
