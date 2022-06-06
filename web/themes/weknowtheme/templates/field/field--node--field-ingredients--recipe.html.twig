@@ -1,0 +1,124 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{ attributes.addClass(classes, 'field__items') }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+      <div class="field__items">
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+
+<ul class='blog-post__tags field__items'>
+  {%- for item in items -%}
+    {% if loop.first %}
+      <li{{ item.attributes.addClass(['blog-post__tag', 'first']) }}>{{ item.content }}</li>
+    {% elseif loop.last %}
+      <li{{ item.attributes.addClass(['blog-post__tag', 'last']) }}>{{ item.content }}</li>
+    {% else %}
+      <li{{ item.attributes.addClass('blog-post__tag') }}>{{ item.content }}</li>
+    {% endif %}
+    <div class="value">
+      Random Value {{ (random()/100)|number_format(1)}}
+      {% if random(10) < 5 %}
+        <div>Wow, this is some cheap swag!</div>
+      {% endif %}
+    </div>
+    {% if not item.content|length == 0 %}
+      <div class="alert alert-error span12">
+        Oh now! We'ar all out of super-awesome penguin clothes.
+      </div>
+    {% endif %}
+
+  {%- endfor -%}
+</ul>
+<h2>url($name, $parameters, $options)</h2>
+<a href="{{ url('view.frontpage.page_1') }}">{{ 'View front page content'|t|upper|reverse }}</a>
+<h2>path($name, $parameters, $options)</h2>
+<a href="{{ path('entity.user.canonical', {'user': user.id}) }}">
+  {{ 'View user profile'|t }}
+</a>
+<h2>link($text, $url, $attributes)</h2>
+{{ link('Drupalize.Me', 'https://drupalize.me', {'class': ['external'], 'role':['link']}) }}
+
+  <p>
+    {% set create_content = path('node.type_add') %}
+    {% trans %}
+      You have not created any content types yet. Go to the <a href="{{ create_content }}">content type creation page</a> to add a new content type.
+    {% endtrans %}
+  </p>
+
+
+

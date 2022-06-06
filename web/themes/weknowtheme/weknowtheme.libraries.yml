@@ -1,11 +1,11 @@
 # Main theme library.
-global:
-  js:
+#global:
+#  js:
 #    js/weknowtheme.js: {}
-  css:
-    base:
+#  css:
+#    base:
 #      css/base/elements.css: {}
-    component:
+#    component:
 #      css/components/block.css: {}
 #      css/components/breadcrumb.css: {}
 #      css/components/field.css: {}
@@ -18,9 +18,9 @@ global:
 #      css/components/table.css: {}
 #      css/components/tabs.css: {}
 #      css/components/buttons.css: {}
-    layout:
+#    layout:
 #      css/layouts/layout.css: {}
-    theme:
+#    theme:
 #      css/theme/print.css: { media: print }
 node.cta:
   version: 0.1

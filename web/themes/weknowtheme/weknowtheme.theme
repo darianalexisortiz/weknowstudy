@@ -8,20 +8,36 @@
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
-function weknowtheme_preprocess_html(&$variables) {
+function weknowtheme_preprocess(&$variables, $hook){
+
+    if($hook == 'node') {
+       $a = $variables['node']->field_main_image;
+    }
+    if($hook == 'node') {
+        $variables['custom_footer_text'] = t('This site is copyleft 2016 by @name', array('@name' => $variables['user']->getDisplayName()));
+    }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function weknowtheme_preprocess_html(&$variables)
+{
 
 }
 
 /**
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
-function weknowtheme_preprocess_page(&$variables) {
+function weknowtheme_preprocess_page(&$variables)
+{
 
 }
 
 /**
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
-function weknowtheme_preprocess_node(&$variables) {
+function weknowtheme_preprocess_node(&$variables)
+{
 
 }
