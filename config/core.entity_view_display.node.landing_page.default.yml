@@ -159,7 +159,8 @@ third_party_settings:
       allowed_layouts:
         - layout_onecol
         - custom_layouts_three_column_25_50_25
-        - layout_twocol_section
+        - custom_layouts_three_column_50_25_25
+        - 'dynamic_layout:example_dynamic_layout_two_columns_0'
       blacklisted_blocks: {  }
       whitelisted_blocks:
         'Chaos Tools':

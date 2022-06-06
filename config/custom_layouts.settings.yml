@@ -1,0 +1,5 @@
+layouts:
+  example_dynamic_layout_two_columns_0:
+    label: 'Example dynamic layout two columns'
+    category: null
+    columns: two_cols
