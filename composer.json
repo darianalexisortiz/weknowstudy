@@ -35,6 +35,18 @@
                 "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip",
+                "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -54,7 +66,9 @@
         "drupal/twig_vardumper": "^3.0",
         "drupal/devel": "^4.1",
         "d3/d3": "3.5.*",
-        "components/highlightjs": "9.7.*"
+        "components/highlightjs": "9.7.*",
+        "drupal/colorbox": "^1.10",
+        "jackmoore/colorbox": "^1.6"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2",
