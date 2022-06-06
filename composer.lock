@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1057053179012723c54b3a586b94abc6",
+    "content-hash": "c131c91f1a50da0a27c044fdbe1d27e3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -123,6 +123,15 @@
                 "source": "https://github.com/Chi-teck/drupal-code-generator/tree/2.5.3"
             },
             "time": "2022-03-31T17:15:11+00:00"
+        },
+        {
+            "name": "components/highlightjs",
+            "version": "9.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/components/highlightjs/archive/9.7.0.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "composer/installers",
@@ -950,6 +959,15 @@
                 "source": "https://github.com/cweagans/composer-patches/tree/1.7.2"
             },
             "time": "2022-01-25T19:21:20+00:00"
+        },
+        {
+            "name": "d3/d3",
+            "version": "v3.5.17",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/d3/d3/archive/v3.5.17.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "dflydev/dot-access-data",

@@ -11,6 +11,30 @@
         {
             "type": "path",
             "url": "upstream-configuration"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "d3/d3",
+                "version": "v3.5.17",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/d3/d3/archive/v3.5.17.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+            "name": "components/highlightjs",
+            "version": "9.7.0",
+            "type": "drupal-library",
+            "dist": {
+                "url": "https://github.com/components/highlightjs/archive/9.7.0.zip",
+                "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -28,7 +52,9 @@
         "drupal/ctools": "^3.7",
         "drupal/layout_builder_styles": "^1.0@beta",
         "drupal/twig_vardumper": "^3.0",
-        "drupal/devel": "^4.1"
+        "drupal/devel": "^4.1",
+        "d3/d3": "3.5.*",
+        "components/highlightjs": "9.7.*"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2",
