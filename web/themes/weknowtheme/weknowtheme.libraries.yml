@@ -1,11 +1,11 @@
 # Main theme library.
-#global:
+global:
 #  js:
 #    js/weknowtheme.js: {}
-#  css:
+  css:
 #    base:
 #      css/base/elements.css: {}
-#    component:
+    component:
 #      css/components/block.css: {}
 #      css/components/breadcrumb.css: {}
 #      css/components/field.css: {}
@@ -14,6 +14,7 @@
 #      css/components/menu.css: {}
 #      css/components/messages.css: {}
 #      css/components/node.css: {}
+      css/components/hero.css: {}
 #      css/components/sidebar.css: {}
 #      css/components/table.css: {}
 #      css/components/tabs.css: {}
