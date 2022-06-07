@@ -157,7 +157,7 @@ hola
 <div{{ attributes.addClass(classes).removeClass('my-special-class').setAttribute('id', 'myID') }}>test</div>
 <div{{ attributes.setAttribute('id', 'myID').removeAttribute('id') }}>test2</div>
 <div{{ attributes.setAttribute('data-bundle', node.bundle) }}>test3</div>
-{{ vardumper(attributes) }}
+{# {{ vardumper(attributes) }} #}
 {% if attributes.hasClass('clearfix') %}
   Yes, the class 'clearfix' is in the div.
 {% endif %}
