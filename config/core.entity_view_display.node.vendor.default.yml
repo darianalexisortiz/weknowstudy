@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.vendor.body
     - field.field.node.vendor.field_main_image
     - field.field.node.vendor.field_vendor_url
-    - image.style.extra_medium
     - node.type.vendor
   module:
     - image
@@ -30,7 +29,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: extra_medium
+      image_style: ''
     third_party_settings: {  }
     weight: 0
     region: content
@@ -38,11 +37,11 @@ content:
     type: link
     label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: _blank
     third_party_settings: {  }
     weight: 2
     region: content
