@@ -1,0 +1,29 @@
+uuid: 05d9699a-1376-439e-aa76-c2dfda4ecfea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_ingredients
+    - media.type.image
+    - taxonomy.vocabulary.ingredients
+id: media.image.field_ingredients
+field_name: field_ingredients
+entity_type: media
+bundle: image
+label: Ingredients
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ingredients: ingredients
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

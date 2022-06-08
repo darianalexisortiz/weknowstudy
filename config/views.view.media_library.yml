@@ -5,10 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - image.style.media_library
+    - taxonomy.vocabulary.ingredients
   module:
     - image
     - media
     - media_library
+    - taxonomy
     - user
   enforced:
     module:
@@ -478,13 +480,26 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio.default'
+        - 'config:core.entity_view_display.media.audio.media_library'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.hero'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.sidebar'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.media_library'
   page:
     id: page
     display_title: Page
@@ -781,7 +796,19 @@ display:
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio.default'
+        - 'config:core.entity_view_display.media.audio.media_library'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.hero'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.sidebar'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.media_library'
   widget:
     id: widget
     display_title: Widget
@@ -1059,6 +1086,54 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_ingredients_target_id:
+          id: field_ingredients_target_id
+          table: media__field_ingredients
+          field: field_ingredients_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ingredients_target_id_op
+            label: Ingredients
+            description: ''
+            use_operator: false
+            operator: field_ingredients_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ingredients_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: ingredients
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -1100,8 +1175,21 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
+        - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio.default'
+        - 'config:core.entity_view_display.media.audio.media_library'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.hero'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.sidebar'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
+        - 'config:core.entity_view_display.media.video.default'
+        - 'config:core.entity_view_display.media.video.media_library'
   widget_table:
     id: widget_table
     display_title: 'Widget (table)'
@@ -1339,6 +1427,54 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_ingredients_target_id:
+          id: field_ingredients_target_id
+          table: media__field_ingredients
+          field: field_ingredients_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ingredients_target_id_op
+            label: Ingredients
+            description: ''
+            use_operator: false
+            operator: field_ingredients_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ingredients_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: ingredients
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -1388,5 +1524,6 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
+        - user
         - user.permissions
       tags: {  }

@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_video_credit
     - media.type.remote_video
   module:
     - media
+    - text
 _core:
   default_config_hash: zQoBQ0BtnMM_rlDdgftyu6eI4AVs9mo5K8xq7NFO2Zc
 id: media.remote_video.default
@@ -22,6 +24,13 @@ content:
       max_height: 0
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_video_credit:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   created: true

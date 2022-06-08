@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.sidebar
+    - field.field.media.image.field_ingredients
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - image.style.wide
@@ -38,6 +39,7 @@ content:
     region: content
 hidden:
   created: true
+  field_ingredients: true
   langcode: true
   name: true
   thumbnail: true

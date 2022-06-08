@@ -1,0 +1,20 @@
+uuid: cd818f72-ab13-45ba-aae3-85f3e5fa2058
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - text
+id: media.field_video_credit
+field_name: field_video_credit
+entity_type: media
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
