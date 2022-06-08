@@ -68,7 +68,8 @@
         "d3/d3": "3.5.*",
         "components/highlightjs": "9.7.*",
         "drupal/colorbox": "^1.10",
-        "jackmoore/colorbox": "^1.6"
+        "jackmoore/colorbox": "^1.6",
+        "drupal/entity_browser": "^2.6"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2",
