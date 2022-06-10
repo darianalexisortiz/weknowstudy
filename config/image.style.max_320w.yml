@@ -1,0 +1,15 @@
+uuid: 89a5e08c-961b-4894-863d-d0b96d9c9c3f
+langcode: en
+status: true
+dependencies: {  }
+name: max_320w
+label: 'Max 320w'
+effects:
+  699c03a4-3039-4755-9e80-41c9f426f06d:
+    uuid: 699c03a4-3039-4755-9e80-41c9f426f06d
+    id: image_scale
+    weight: 1
+    data:
+      width: 320
+      height: null
+      upscale: false

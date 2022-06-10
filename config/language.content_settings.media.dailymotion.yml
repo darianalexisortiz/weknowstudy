@@ -1,0 +1,11 @@
+uuid: 6105d9da-f402-4f66-87e4-d37dcc451eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.dailymotion
+id: media.dailymotion
+target_entity_type_id: media
+target_bundle: dailymotion
+default_langcode: site_default
+language_alterable: false

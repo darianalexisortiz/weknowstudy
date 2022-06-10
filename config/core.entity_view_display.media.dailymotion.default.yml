@@ -1,0 +1,29 @@
+uuid: 294fad4a-6ed9-4dcf-807f-8e1ebaec0bbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.dailymotion.field_media_oembed_dailymotion
+    - media.type.dailymotion
+  module:
+    - media
+id: media.dailymotion.default
+targetEntityType: media
+bundle: dailymotion
+mode: default
+content:
+  field_media_oembed_dailymotion:
+    type: oembed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

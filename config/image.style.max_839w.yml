@@ -1,0 +1,15 @@
+uuid: 8b0743fb-d13c-4c3d-96d7-fcdd4df08b84
+langcode: en
+status: true
+dependencies: {  }
+name: max_839w
+label: 'Max 839w'
+effects:
+  68effd68-7002-4812-83ab-96db28f7071f:
+    uuid: 68effd68-7002-4812-83ab-96db28f7071f
+    id: image_scale
+    weight: 1
+    data:
+      width: 839
+      height: null
+      upscale: false

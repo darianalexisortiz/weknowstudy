@@ -1,0 +1,31 @@
+uuid: ce7f8c0e-f766-4b38-a030-bd403ebbd1a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.dailymotion
+    - media.type.video
+    - node.type.vendor
+id: node.vendor.field_media
+field_name: field_media
+entity_type: node
+bundle: vendor
+label: Media
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      dailymotion: dailymotion
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: dailymotion
+field_type: entity_reference

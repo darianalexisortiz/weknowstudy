@@ -1,0 +1,31 @@
+uuid: 99cbdc3c-a6eb-473d-8313-0bc4cc7e931a
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.max_1118w
+    - image.style.max_320w
+    - image.style.max_480w
+    - image.style.max_640w
+    - image.style.max_720w
+    - image.style.max_839w
+    - image.style.max_960w
+id: recipe_image
+label: 'Recipe image'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - max_1118w
+        - max_320w
+        - max_480w
+        - max_640w
+        - max_720w
+        - max_839w
+        - max_960w
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: max_320w

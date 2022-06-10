@@ -1,0 +1,9 @@
+uuid: d6e025b2-4592-40ab-bc42-b0321b7b2d2b
+langcode: en
+status: true
+dependencies: {  }
+id: dailymotion
+label: Dailymotion
+description: ''
+providers:
+  - Dailymotion

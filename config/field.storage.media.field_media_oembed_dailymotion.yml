@@ -1,0 +1,21 @@
+uuid: d2c6b4ef-6e79-462a-a607-be54c56cc040
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_media_oembed_dailymotion
+field_name: field_media_oembed_dailymotion
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

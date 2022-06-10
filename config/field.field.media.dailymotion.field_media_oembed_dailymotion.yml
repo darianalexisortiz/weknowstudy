@@ -1,0 +1,19 @@
+uuid: c4c35fe1-e2df-4abe-948d-7cf646d95a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_dailymotion
+    - media.type.dailymotion
+id: media.dailymotion.field_media_oembed_dailymotion
+field_name: field_media_oembed_dailymotion
+entity_type: media
+bundle: dailymotion
+label: 'Dailymotion URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

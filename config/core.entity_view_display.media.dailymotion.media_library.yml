@@ -1,0 +1,30 @@
+uuid: 85fc58bc-24fb-45e0-a123-9f3d6ee730e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.dailymotion.field_media_oembed_dailymotion
+    - media.type.dailymotion
+  module:
+    - media
+id: media.dailymotion.media_library
+targetEntityType: media
+bundle: dailymotion
+mode: media_library
+content:
+  field_media_oembed_dailymotion:
+    type: oembed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

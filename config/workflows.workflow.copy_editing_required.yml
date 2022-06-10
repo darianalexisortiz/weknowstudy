@@ -1,0 +1,86 @@
+uuid: aaab5190-d7f6-4b5e-97af-3768006cbe44
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+  module:
+    - content_moderation
+id: copy_editing_required
+label: 'Copy editing required'
+type: content_moderation
+type_settings:
+  states:
+    coming_soon:
+      label: 'Coming soon'
+      weight: 1
+      published: false
+      default_revision: false
+    draft:
+      label: Draft
+      weight: -3
+      published: false
+      default_revision: false
+    needs_copy_editing:
+      label: 'Needs copy editing'
+      weight: -1
+      published: false
+      default_revision: false
+    needs_technical_review:
+      label: 'Needs technical review'
+      weight: -2
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 2
+      published: true
+      default_revision: true
+    scheduled_for_publication:
+      label: 'Scheduled for publication'
+      weight: 0
+      published: false
+      default_revision: false
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: -3
+    publish:
+      label: Publish
+      from:
+        - coming_soon
+        - scheduled_for_publication
+      to: published
+      weight: 2
+    to_coming_soon:
+      label: 'To coming soon'
+      from:
+        - scheduled_for_publication
+      to: coming_soon
+      weight: 1
+    to_copy_editing:
+      label: 'To copy editing'
+      from:
+        - needs_technical_review
+      to: needs_copy_editing
+      weight: -1
+    to_scheduled_of_publication:
+      label: 'To scheduled of publication'
+      from:
+        - needs_copy_editing
+      to: scheduled_for_publication
+      weight: 0
+    to_technical_review:
+      label: 'To technical review'
+      from:
+        - draft
+      to: needs_technical_review
+      weight: -2
+  entity_types:
+    node:
+      - recipe
+  default_moderation_state: draft

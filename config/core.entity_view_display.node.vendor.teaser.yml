@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.vendor.body
     - field.field.node.vendor.field_main_image
+    - field.field.node.vendor.field_media
+    - field.field.node.vendor.field_twitter
     - field.field.node.vendor.field_vendor_url
     - node.type.vendor
   module:
@@ -31,5 +33,7 @@ content:
     region: content
 hidden:
   field_main_image: true
+  field_media: true
+  field_twitter: true
   field_vendor_url: true
   langcode: true

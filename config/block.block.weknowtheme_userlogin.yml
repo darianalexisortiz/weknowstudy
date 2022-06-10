@@ -9,7 +9,7 @@ dependencies:
 id: weknowtheme_userlogin
 theme: weknowtheme
 region: sidebar_first
-weight: 0
+weight: -6
 provider: null
 plugin: user_login_block
 settings:

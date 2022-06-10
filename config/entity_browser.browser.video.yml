@@ -1,0 +1,41 @@
+uuid: 9fcfd689-6110-45bc-a1df-99e2ff0cd644
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_library
+  module:
+    - views
+name: video
+label: Video
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  a93f5192-4bd5-4b10-97cf-c8c3bc396e56:
+    id: view
+    uuid: a93f5192-4bd5-4b10-97cf-c8c3bc396e56
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: media_library
+      view_display: entity_browser_1
+  b1eeb19c-c9e9-43a4-9d87-24c68ab221b2:
+    id: upload
+    uuid: b1eeb19c-c9e9-43a4-9d87-24c68ab221b2
+    label: upload
+    weight: 2
+    settings:
+      submit_text: 'Select files'
+      upload_location: 'public://'
+      multiple: true
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'

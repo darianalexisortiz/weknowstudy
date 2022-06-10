@@ -1,0 +1,20 @@
+uuid: ce66f7e4-78cd-4de6-bcf7-53216a298fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - oembed_providers.bucket.dailymotion
+  module:
+    - oembed_providers
+id: dailymotion
+label: Dailymotion
+description: ''
+source: 'oembed:dailymotion'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_dailymotion
+  thumbnails_directory: 'public://oembed_thumbnails/[date:custom:Y-m]'
+  providers:
+    - Dailymotion
+field_map: {  }

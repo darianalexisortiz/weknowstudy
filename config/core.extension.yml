@@ -14,6 +14,7 @@ module:
   config: 0
   config_translation: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   ctools: 0
   ctools_block: 0
@@ -21,8 +22,11 @@ module:
   custom_layouts: 0
   datetime: 0
   dblog: 0
+  diff: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_browser: 0
+  entity_usage: 0
   field: 0
   field_ui: 0
   file: 0
@@ -39,17 +43,24 @@ module:
   link: 0
   locale: 0
   media: 0
+  media_entity_twitter: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
+  oembed_providers: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
   quickedit: 0
   rdf: 0
+  responsive_image: 0
   search: 0
+  search_api: 0
+  search_api_pantheon: 0
+  search_api_solr: 0
+  search_api_solr_legacy: 0
   shortcut: 0
   system: 0
   taxonomy: 0
@@ -60,6 +71,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  workflows: 0
   pathauto: 1
   content_translation: 10
   views: 10

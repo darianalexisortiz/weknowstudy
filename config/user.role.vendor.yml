@@ -1,0 +1,34 @@
+uuid: e85c801c-658d-4a49-ad57-1c0880495985
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - node.type.landing_page
+    - node.type.recipe
+    - node.type.vendor
+    - workflows.workflow.copy_editing_required
+    - workflows.workflow.editorial
+  module:
+    - contact
+    - content_moderation
+    - filter
+    - node
+    - quickedit
+id: vendor
+label: Vendor
+weight: 4
+is_admin: null
+permissions:
+  - 'access in-place editing'
+  - 'access user contact forms'
+  - 'create recipe content'
+  - 'delete own recipe content'
+  - 'edit own landing_page content'
+  - 'edit own recipe content'
+  - 'edit own vendor content'
+  - 'use copy_editing_required transition create_new_draft'
+  - 'use editorial transition create_new_draft'
+  - 'use text format restricted_html'
+  - 'view any unpublished content'
+  - 'view latest version'

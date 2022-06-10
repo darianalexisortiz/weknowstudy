@@ -8,11 +8,11 @@ dependencies:
     - field.field.node.recipe.field_main_image
     - field.field.node.recipe.field_media
     - field.field.node.recipe.field_submitted_by
-    - image.style.extra_medium
     - node.type.recipe
+    - responsive_image.styles.recipe_image
   module:
-    - image
     - media
+    - responsive_image
     - text
     - user
 id: node.recipe.default
@@ -36,11 +36,11 @@ content:
     weight: 2
     region: content
   field_main_image:
-    type: image
+    type: responsive_image
     label: hidden
     settings:
+      responsive_image_style: recipe_image
       image_link: ''
-      image_style: extra_medium
     third_party_settings: {  }
     weight: 0
     region: content

@@ -1,0 +1,11 @@
+uuid: fc171fee-f16c-4057-b6cd-2ff335671ab6
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.twitter
+id: media.twitter
+target_entity_type_id: media
+target_bundle: twitter
+default_langcode: site_default
+language_alterable: false
