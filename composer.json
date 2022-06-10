@@ -75,7 +75,8 @@
         "drupal/oembed_providers": "^2.0",
         "drupal/diff": "^1.0",
         "drupal/search_api": "^1.23",
-        "drupal/search_api_solr": "^4.2"
+        "drupal/search_api_solr": "^4.2",
+        "drupal/search_api_pantheon": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2",
