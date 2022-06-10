@@ -5,5 +5,6 @@ config:
   site: weknow-study
   id: c50bae8f-574c-4466-9a21-331b08010d98
   xdebug: true
+  solr: true
   config:
     php: .vscode/php.ini
