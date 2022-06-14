@@ -78,7 +78,9 @@
         "drupal/search_api_solr": "^4.2",
         "drupal/search_api_pantheon": "^3.0",
         "drupal/search_api_autocomplete": "^1.6",
-        "drupal/facets": "^2.0"
+        "drupal/facets": "^2.0",
+        "drupal/config_filter": "^2.3",
+        "drupal/config_split": "^2.0@RC"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2",
