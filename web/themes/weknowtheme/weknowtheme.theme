@@ -41,3 +41,17 @@ function weknowtheme_preprocess_node(&$variables)
 {
 
 }
+/**
+* Implements hook_page_attachments_alter().
+*/
+function weknowtheme_page_attachments_alter(array &$page) {
+    // We're going to pass along the user's display name to our front-end code.
+    $account = \Drupal::currentUser();
+    if ($account->isAuthenticated()) {
+      // First we attach our asset library to the page.
+      $page['#attached']['library'][] = 'weKnow/global';
+      // Then we pass along our dynamic value.
+      // This will then be available in our JavaScript as drupalSettings.friendly.name.
+      $page['#attached']['drupalSettings']['weKnow']['name'] = $account->getDisplayName();
+    }
+  }

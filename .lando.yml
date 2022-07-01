@@ -8,3 +8,11 @@ config:
   solr: true
   config:
     php: .vscode/php.ini
+services:
+  appserver:
+    type: php
+    build_as_root:
+      - apt-get update -y
+      - pecl d xhprof-2.2.0 && tar xzf xhprof-2.2.0.tgz
+      - cd xhprof-2.2.0/extension && phpize && ./configure && make && make install
+      - docker-php-ext-enable xhprof

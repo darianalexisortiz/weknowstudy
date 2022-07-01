@@ -1,0 +1,14 @@
+uuid: 5bc15842-4fc3-4d8d-b704-937a5b9f0b22
+langcode: en
+status: true
+name: large2
+label: 'Large2 (470×470)'
+effects:
+  ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
+    uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
+    id: image_scale
+    weight: 0
+    data:
+      width: 470
+      height: 470
+      upscale: false

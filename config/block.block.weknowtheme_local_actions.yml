@@ -1,4 +1,4 @@
-uuid: 73874764-75e4-4e00-a501-8518a7e659f2
+uuid: da7ba36a-cce8-40d0-8ef5-8581396a434c
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: weknowtheme_local_actions
 theme: weknowtheme
 region: content
-weight: -5
+weight: -20
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,6 +1,6 @@
-uuid: 5714042e-b6a5-4300-a3b2-ada09f0250f0
+uuid: 4d1ac7e5-db9a-40b8-a3a4-f3dd498dc57b
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - search
@@ -11,7 +11,7 @@ _core:
 id: weknowtheme_search
 theme: weknowtheme
 region: sidebar_first
-weight: -7
+weight: -8
 provider: null
 plugin: search_form_block
 settings:

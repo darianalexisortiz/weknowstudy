@@ -1,4 +1,4 @@
-uuid: b1514c46-00d6-41aa-a215-985355091b9e
+uuid: 9698c1c0-b351-4d07-bd5c-853d3cabb448
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: weknowtheme_local_tasks
 theme: weknowtheme
 region: content
-weight: -6
+weight: -40
 provider: null
 plugin: local_tasks_block
 settings:

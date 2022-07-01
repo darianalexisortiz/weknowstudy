@@ -1,4 +1,4 @@
-uuid: 6de96530-59fa-4a37-b414-d563cf17a11e
+uuid: ade92293-9556-4658-ac54-ba000b2aad8f
 langcode: en
 status: true
 dependencies:
@@ -12,8 +12,8 @@ _core:
   default_config_hash: pnCK21YFjH7iB4XDeokSq3N3XSr6qX8BsqMs9nmip6E
 id: weknowtheme_footer
 theme: weknowtheme
-region: footer
-weight: -8
+region: header
+weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

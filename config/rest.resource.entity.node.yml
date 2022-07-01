@@ -1,0 +1,19 @@
+uuid: 042087a7-b48b-4664-840e-f76c8995fcbf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - serialization
+    - user
+_core:
+  default_config_hash: t_jfECmZhJqBOJuSOFn87EOi_TWi-_fRYTuJgd19vgg
+id: entity.node
+plugin_id: 'entity:node'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

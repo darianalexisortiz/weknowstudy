@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains do_projects.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function do_projects_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the do_projects module.
+    case 'help.page.do_projects':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A custom module to list Drupal.org projects') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function do_projects_theme() {
+  $theme = [];
+
+  return $theme;
+}

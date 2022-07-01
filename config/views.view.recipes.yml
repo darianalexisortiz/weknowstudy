@@ -11,6 +11,8 @@ dependencies:
   module:
     - image
     - node
+    - rest
+    - serialization
     - taxonomy
     - user
 id: recipes
@@ -83,6 +85,8 @@ display:
           settings:
             image_link: content
             image_style: medium
+            image_loading:
+              attribute: lazy
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -457,6 +461,32 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_main_image'
+  rest_export_1:
+    id: rest_export_1
+    display_title: 'REST export'
+    display_plugin: rest_export
+    position: 3
+    display_options:
+      style:
+        type: serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      display_extenders: {  }
+      path: recipes_json
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
         - user
         - 'user.node_grants:view'
         - user.permissions

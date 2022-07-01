@@ -1,0 +1,20 @@
+uuid: fc159132-2386-4640-abe0-d2f568f16233
+langcode: en
+status: true
+dependencies:
+  module:
+    - do_projects
+  theme:
+    - weknowtheme
+id: doprojectlistingblock
+theme: weknowtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: do_project_listing_block
+settings:
+  id: do_project_listing_block
+  label: 'Do project listing block'
+  label_display: visible
+  provider: do_projects
+visibility: {  }

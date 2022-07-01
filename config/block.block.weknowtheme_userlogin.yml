@@ -1,4 +1,4 @@
-uuid: 587d2546-04a7-47e0-8dd1-6f10d5c0374f
+uuid: 59ca84de-1917-4c4c-937f-3e9b52fa22d8
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
 id: weknowtheme_userlogin
 theme: weknowtheme
 region: sidebar_first
-weight: -6
+weight: 0
 provider: null
 plugin: user_login_block
 settings:

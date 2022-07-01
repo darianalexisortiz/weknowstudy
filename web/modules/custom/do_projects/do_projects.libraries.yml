@@ -1,0 +1,8 @@
+do_projects.projects:
+  js:
+    js/doProjects.js: { preprocess: false }
+  dependencies:
+    - core/underscore
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings

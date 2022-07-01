@@ -1,4 +1,4 @@
-uuid: 216353b8-a980-40dd-a31c-32387a43cfe1
+uuid: 202f0887-bb70-4e90-b76e-0d084d9e62c2
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: weknowtheme_content
 theme: weknowtheme
 region: content
-weight: -4
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

@@ -1,4 +1,4 @@
-uuid: 12bc86c2-be48-4abe-b013-0f7f6c34d6cb
+uuid: 37e38909-81b3-47a9-afd8-c5257edaf558
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: weknowtheme_page_title
 theme: weknowtheme
 region: content
-weight: -7
+weight: -50
 provider: null
 plugin: page_title_block
 settings:

@@ -1,4 +1,4 @@
-uuid: 891b9211-9c9a-4e0f-9768-e5123a12263b
+uuid: 8d95798f-d6af-44a9-bd0a-c58d67105e48
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
 id: weknowtheme_messages
 theme: weknowtheme
-region: content
-weight: -8
+region: header
+weight: 0
 provider: null
 plugin: system_messages_block
 settings:

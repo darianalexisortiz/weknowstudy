@@ -1,0 +1,7 @@
+name: do_projects
+type: module
+description: A custom module to list Drupal.org projects
+core_version_requirement: ^9 || ^10
+package: Other
+dependencies:
+  - block
