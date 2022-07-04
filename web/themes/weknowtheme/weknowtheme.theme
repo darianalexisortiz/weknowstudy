@@ -49,7 +49,7 @@ function weknowtheme_page_attachments_alter(array &$page) {
     $account = \Drupal::currentUser();
     if ($account->isAuthenticated()) {
       // First we attach our asset library to the page.
-      $page['#attached']['library'][] = 'weKnow/global';
+      $page['#attached']['library'][] = 'weknow/global';
       // Then we pass along our dynamic value.
       // This will then be available in our JavaScript as drupalSettings.friendly.name.
       $page['#attached']['drupalSettings']['weKnow']['name'] = $account->getDisplayName();
