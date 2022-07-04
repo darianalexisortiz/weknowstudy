@@ -54,16 +54,7 @@
 			</ul>
 		{% endif %}
 	{% endmacro %}
-	{{ _self.exampleMarco(1, 2, 3) }}
 
-	{% macro exampleMarco(a, b, c) %}
-		<div>a
-			{{a}}</div>
-		<div>b
-			{{b}}</div>
-		<div>c
-			{{c}}</div>
-	{% endmacro %}
 	{#% import "#{directory}/templates/macros.twig" as name %#}
 	{#{ name.test('http://google.com','idunique','button class2') }#}
 

@@ -166,3 +166,14 @@ hola
 <div class="{{ attributes.class }} my-custom-class"{{ attributes|without('clearfix') }}>h</div>
 
 {{ 'You \'re <strong>hip</strong>, you\'re cool, you\'re a.'|raw }}
+{{ _self.exampleMarco(1, 2, 3) }}
+
+{% macro exampleMarco(a, b, c) %}
+	<div>a
+		{{a}}</div>
+	<div>b
+		{{b}}</div>
+	<div>c
+		{{c}}</div>
+{% endmacro %}
+
