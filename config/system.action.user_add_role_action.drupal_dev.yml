@@ -1,0 +1,14 @@
+uuid: c0a0f94a-ee09-4818-98fc-6087cdc88cc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.drupal_dev
+  module:
+    - user
+id: user_add_role_action.drupal_dev
+label: 'Add the Drupal dev role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: drupal_dev

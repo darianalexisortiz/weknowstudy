@@ -1,0 +1,14 @@
+uuid: f92eac6a-549e-48ff-8727-1479940087a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.drupal_dev
+  module:
+    - user
+id: user_remove_role_action.drupal_dev
+label: 'Remove the Drupal dev role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: drupal_dev

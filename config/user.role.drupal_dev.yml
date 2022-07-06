@@ -1,0 +1,35 @@
+uuid: 9391e56c-2ff3-41d3-9cb7-b06f57a7b18e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+    - node.type.vendor
+  module:
+    - node
+    - simple_oauth
+id: drupal_dev
+label: 'Drupal dev'
+weight: 5
+is_admin: null
+permissions:
+  - 'add simple_oauth entities'
+  - 'administer simple_oauth entities'
+  - 'create recipe content'
+  - 'create vendor content'
+  - 'debug simple_oauth tokens'
+  - 'delete any recipe content'
+  - 'delete any vendor content'
+  - 'delete own recipe content'
+  - 'delete own simple_oauth entities'
+  - 'delete own vendor content'
+  - 'delete vendor revisions'
+  - 'edit any recipe content'
+  - 'edit any vendor content'
+  - 'edit own recipe content'
+  - 'edit own vendor content'
+  - 'grant simple_oauth codes'
+  - 'revert vendor revisions'
+  - 'update own simple_oauth entities'
+  - 'view own simple_oauth entities'
+  - 'view vendor revisions'
