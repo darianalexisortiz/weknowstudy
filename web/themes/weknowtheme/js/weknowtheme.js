@@ -29,8 +29,8 @@
       } else {
         console.log('no emoji for you');
       }
-      console.log(drupalSettings.doProjects.projects);
-    }
+/*       console.log(drupalSettings.doProjects.projects);
+ */    }
   };
 
 

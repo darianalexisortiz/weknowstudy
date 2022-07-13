@@ -1,0 +1,7 @@
+name: React Block
+type: module
+description: Example react block
+package: React
+core_version_requirement: ^9 || ^10
+dependencies:
+  - jsonapi

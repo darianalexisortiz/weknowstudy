@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for React Block module.
+ */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+
+  function react_block_page_attachments_alter(array &$attachments) {
+  // Use the dev library if we're developing locally.
+  $attachments['#attached']['library'][] = 'react_block/react_block';
+
+  if (in_array('react_block/react_block', $attachments['#attached']['library']) && file_exists(__DIR__ . '/js/dist_dev')) {
+    $index = array_search('react_block/react_block', $attachments['#attached']['library']);
+    $attachments['#attached']['library'][$index] = 'react_block/react_block_dev';
+  }
+}

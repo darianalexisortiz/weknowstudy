@@ -1,0 +1,14 @@
+# Custom module library for general purposes.
+react_block:
+  js:
+    js/react-block.min.js: {}
+  css:
+    component:
+      css/react-block.css: {}
+  dependencies:
+    - core/drupalSettings
+
+react_block_dev:
+  version: VERSION
+  js:
+    js/dist_dev/react-block.min.js: {minified: true}
