@@ -59,7 +59,7 @@ class WeknowModuleController extends ControllerBase
         ],
         '#url' => \Drupal\Core\Url::fromRoute('weknow_module.submit_driven'),
         ];
-        $build['#attached']['library'][] = 'weknow_module/weknow_module';
+        //$build['#attached']['library'][] = 'weknow_module/weknow_module';
 
         return [
           '#theme' => 'weknow',
