@@ -1,0 +1,14 @@
+uuid: 304e2b7b-438e-4daf-b3e9-5ecb383e721f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.themer
+  module:
+    - user
+id: user_add_role_action.themer
+label: 'Add the Themer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: themer

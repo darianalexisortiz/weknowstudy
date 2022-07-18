@@ -1,0 +1,24 @@
+weknow_module.example:
+  path: '/weknow-module/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\weknow_module\Controller\WeknowModuleController::build'
+  requirements:
+    _permission: 'access content'
+
+
+weknow_module.dependent_dropdown:
+  path: '/weknow-module/dependent-dropdown'
+  defaults:
+    _title: 'Dependent dropdown'
+    _form: 'Drupal\weknow_module\Form\DependentDropdown'
+  requirements:
+    _permission: 'access content'
+
+weknow_module.submit_driven:
+  path: '/weknow-module/submit-driven'
+  defaults:
+    _title: 'Submit driven'
+    _form: 'Drupal\weknow_module\Form\SubmitDriven'
+  requirements:
+    _permission: 'access content'

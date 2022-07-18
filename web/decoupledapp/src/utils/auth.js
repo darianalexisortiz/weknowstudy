@@ -20,7 +20,7 @@ const refreshPromises = [];
 export function getAuthClient(config = {}) {
   const defaultConfig = {
     // Base URL of your Drupal site.
-    base: 'https://dev-weknow-study.pantheonsite.io',
+    base: 'https://weknow-study.lndo.site',
     // Name to use when storing the token in localStorage.
     token_name: 'React',
     // OAuth client ID - get from Drupal.

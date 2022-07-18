@@ -1,0 +1,16 @@
+uuid: dcd74c19-b397-4932-a202-81cb85325542
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - toolbar
+id: themer
+label: Themer
+weight: 6
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access toolbar'
+  - 'administer themes'
+  - 'view the administration theme'

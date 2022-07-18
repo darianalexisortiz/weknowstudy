@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_cta_link
     - field.field.node.landing_page.field_cta_text
@@ -15,7 +14,6 @@ dependencies:
     - views.view.recipes
   module:
     - ctools
-    - custom_layouts
     - image
     - layout_builder
     - layout_builder_restrictions
@@ -52,10 +50,10 @@ third_party_settings:
             uuid: 3aa8dc21-b4a8-4e13-8891-5c9a8a4d2125
             region: content
             configuration:
+              id: 'field_block:node:landing_page:field_hero_image'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:landing_page:field_hero_image'
               formatter:
                 type: image
                 label: above
@@ -72,8 +70,8 @@ third_party_settings:
         layout_id: layout_twocol_section
         layout_settings:
           label: 'Mian content'
-          column_widths: 25-75
           context_mapping: {  }
+          column_widths: 25-75
         components:
           b5509bae-b855-4b3d-9881-10c57306803e:
             uuid: b5509bae-b855-4b3d-9881-10c57306803e
@@ -119,58 +117,6 @@ third_party_settings:
               items_per_page: none
             weight: 1
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: custom_layouts_three_column_25_50_25
-        layout_settings:
-          label: 'Footer content'
-          context_mapping: {  }
-        components:
-          55540c98-73c6-41a1-9790-14310a75e5e9:
-            uuid: 55540c98-73c6-41a1-9790-14310a75e5e9
-            region: first
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Warning Block'
-              label_display: visible
-              provider: layout_builder
-              view_mode: full
-              block_revision_id: 4
-              block_serialized: null
-              context_mapping: {  }
-            weight: 0
-            additional:
-              layout_builder_styles_style: warning
-          72896ee7-47e9-49b9-8831-fa96935580a3:
-            uuid: 72896ee7-47e9-49b9-8831-fa96935580a3
-            region: second
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Content 2'
-              label_display: visible
-              provider: layout_builder
-              view_mode: full
-              block_revision_id: 6
-              block_serialized: null
-              context_mapping: {  }
-            weight: 0
-            additional:
-              layout_builder_styles_style: ''
-          ee244633-8a08-4f89-83bd-f9c2c6efc416:
-            uuid: ee244633-8a08-4f89-83bd-f9c2c6efc416
-            region: third
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Content 3'
-              label_display: visible
-              provider: layout_builder
-              view_mode: full
-              block_revision_id: 7
-              block_serialized: null
-              context_mapping: {  }
-            weight: 0
-            additional:
-              layout_builder_styles_style: ''
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }

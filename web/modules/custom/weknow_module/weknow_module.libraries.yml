@@ -1,0 +1,7 @@
+# Custom module library for general purposes.
+weknow_module:
+  js:
+    js/weknow-module.js: {}
+  css:
+    component:
+      css/weknow-module.css: {}

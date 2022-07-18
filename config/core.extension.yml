@@ -23,7 +23,6 @@ module:
   ctools: 0
   ctools_block: 0
   ctools_views: 0
-  custom_layouts: 0
   datetime: 0
   dblog: 0
   diff: 0
@@ -69,6 +68,7 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  react_block: 0
   responsive_image: 0
   rest: 0
   restui: 0
@@ -93,6 +93,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  weknow_module: 0
   workflows: 0
   pathauto: 1
   content_translation: 10

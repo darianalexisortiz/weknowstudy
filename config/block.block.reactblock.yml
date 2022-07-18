@@ -1,0 +1,20 @@
+uuid: 57271f33-36cb-4f65-b64c-d603289bc142
+langcode: en
+status: true
+dependencies:
+  module:
+    - react_block
+  theme:
+    - weknowtheme
+id: reactblock
+theme: weknowtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: react_block_example
+settings:
+  id: react_block_example
+  label: 'React Block'
+  label_display: visible
+  provider: react_block
+visibility: {  }
