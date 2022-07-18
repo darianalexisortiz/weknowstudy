@@ -4,3 +4,17 @@
  * @file
  * Primary module hooks for AweKnow module module.
  */
+
+ /**
+ * Implements hook_theme().
+ */
+function weknow_module_theme($existing, $type, $theme, $path) {
+  return [
+    'weknow' => [
+      'variables' => [
+        'form_link1' => NULL,
+        'form_link2' => NULL
+      ],
+    ],
+  ];
+}
