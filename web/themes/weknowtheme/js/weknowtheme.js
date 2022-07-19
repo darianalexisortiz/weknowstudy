@@ -16,7 +16,6 @@
 
       // If we have a nice user name, let's replace the
       // site name with a greeting.
-      console.log(drupalSettings);
       if (drupalSettings.weKnow =! 'undefined') {
         var siteName = document.getElementsByClassName("site-branding__name")[0];
         siteName.getElementsByTagName('a')[0].innerHTML = '<h1>Howdy, ' + Drupal.theme('placeholder', drupalSettings.weKnow.name) + '!</h1>';
