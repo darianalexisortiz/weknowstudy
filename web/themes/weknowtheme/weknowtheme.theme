@@ -62,3 +62,12 @@ function weknowtheme_page_attachments_alter(array &$page) {
       $page['#attached']['drupalSettings']['weKnow']['name'] = $account->getDisplayName();
     }
   }
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function weknowtheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $logged_in = \Drupal::currentUser()->isAuthenticated();
+  if ($logged_in) {
+    $suggestions[] = 'node__' . 'authenticated';
+  }
+}
