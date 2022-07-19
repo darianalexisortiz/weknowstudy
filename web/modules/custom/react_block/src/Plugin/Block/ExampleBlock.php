@@ -24,11 +24,11 @@ class ExampleBlock extends BlockBase
         $build['content'] = [
             //'#markup' => $this->t('It worksa!'),
             '#markup' => '<div id="react-app"></div>',
-            /* '#attached' => [
+            '#attached' => [
                 'library' => [
                     'react_block/react_block'
                 ]
-            ] */
+            ]
         ];
         return $build;
     }
