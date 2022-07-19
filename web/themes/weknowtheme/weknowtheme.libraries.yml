@@ -23,6 +23,10 @@ global:
 #      css/layouts/layout.css: {}
 #    theme:
 #      css/theme/print.css: { media: print }
+  dependencies:
+#    - core/modernizr
+    - core/drupal
+    - core/drupalSettings
 node.cta:
   version: 0.1
   css:

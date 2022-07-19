@@ -10,3 +10,4 @@ weknow_module:
     - core/drupal.dialog.ajax
     - core/jquery.form
     - core/drupal.message
+    - core/drupalSettings

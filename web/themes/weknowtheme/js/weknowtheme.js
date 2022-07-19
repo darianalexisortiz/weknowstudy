@@ -2,7 +2,7 @@
  * @file
  * weKnow theme behaviors.
  */
-(function (Drupal, Modernizr) {
+(function (Drupal, drupalSettings) {
 
   'use strict';
 
@@ -16,11 +16,12 @@
 
       // If we have a nice user name, let's replace the
       // site name with a greeting.
-      if (drupalSettings.weKnow.name) {
+      console.log(drupalSettings);
+      if (drupalSettings.weKnow =! 'undefined') {
         var siteName = document.getElementsByClassName("site-branding__name")[0];
         siteName.getElementsByTagName('a')[0].innerHTML = '<h1>Howdy, ' + Drupal.theme('placeholder', drupalSettings.weKnow.name) + '!</h1>';
       }
-      Modernizr.addTest('itsWednesday', function () {
+/*       Modernizr.addTest('itsWednesday', function () {
         var d = new Date();
         return d.getDay() === 1;
       });
@@ -28,10 +29,9 @@
         //alert('🎉');
       } else {
         console.log('no emoji for you');
-      }
-/*       console.log(drupalSettings.doProjects.projects);
- */    }
+      } */
+   }
   };
 
 
-}(Drupal, Modernizr));
+}(Drupal, drupalSettings));
