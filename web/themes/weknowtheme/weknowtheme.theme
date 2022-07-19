@@ -43,6 +43,10 @@ function weknowtheme_preprocess_node(&$variables)
   if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
     $variables['current_user_is_owner'] = TRUE;
   }
+  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+    $variables['content']['body']['#suffix'] =' [you are the author]';
+  }
+
 }
 /**
 * Implements hook_page_attachments_alter().
