@@ -6,12 +6,12 @@ import { hot } from 'react-hot-loader/root';
 import DrupalProjectStats from './components/DrupalProjectStats';
 import NodeListOnly from "./components/NodeListOnly";
 import NodeReadWrite from "./components/NodeReadWrite";
+/*{
+  <DrupalProjectStats projectName="drupal" />
+}*/
 
 const Main = hot(() => (
   <>
-    {
-      <DrupalProjectStats projectName="drupal" />
-    }
     {
       <NodeListOnly />
     }

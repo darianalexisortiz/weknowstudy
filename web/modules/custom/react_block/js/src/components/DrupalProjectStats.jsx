@@ -48,7 +48,7 @@ const DrupalProjectStats = ({ projectName }) => {
 // props a component accepts.
 // https://reactjs.org/docs/typechecking-with-proptypes.html
 DrupalProjectStats.propTypes = {
-  projectName: PropTypes.string.required
+  projectName: PropTypes.string.isRequired
 };
 
 // Set a default value for any required props.
