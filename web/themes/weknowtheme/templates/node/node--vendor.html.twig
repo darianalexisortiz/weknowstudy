@@ -75,6 +75,7 @@
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     'clearfix',
+    current_user_is_owner ? 'node--current-user-is-owner',
   ]
 %}
 {{ attach_library('bartik/classy.node') }}
@@ -108,6 +109,9 @@
 			{% endtrans %}
 		{% endif %}
 	</div>
+	<script>
+		console.log({{ _context | json_encode | raw }});
+	</script>
+
 
 </article>
-

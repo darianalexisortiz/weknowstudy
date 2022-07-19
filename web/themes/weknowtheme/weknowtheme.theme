@@ -39,7 +39,10 @@ function weknowtheme_preprocess_page(&$variables)
  */
 function weknowtheme_preprocess_node(&$variables)
 {
-
+  $variables['current_user_is_owner'] = FALSE;
+  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+    $variables['current_user_is_owner'] = TRUE;
+  }
 }
 /**
 * Implements hook_page_attachments_alter().
