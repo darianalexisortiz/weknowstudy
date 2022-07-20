@@ -1,0 +1,23 @@
+contact_entity.example:
+  path: '/contact-entity/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\contact_entity\Controller\ContactEntityController::build'
+  requirements:
+    _permission: 'access content'
+
+contact_entity.settings_form:
+  path: '/admin/config/system/contact-entity'
+  defaults:
+    _title: 'Contact entity settings'
+    _form: 'Drupal\contact_entity\Form\SettingsForm'
+  requirements:
+    _permission: 'administer contact_entity configuration'
+
+entity.contact_entity.settings:
+  path: 'admin/structure/contact-entity'
+  defaults:
+    _form: '\Drupal\contact_entity\Form\ContactEntitySettingsForm'
+    _title: 'Contact entity'
+  requirements:
+    _permission: 'administer contact entity'

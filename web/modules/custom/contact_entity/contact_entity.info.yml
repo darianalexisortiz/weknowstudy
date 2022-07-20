@@ -1,0 +1,5 @@
+name: Contact entity
+type: module
+description: It&#039;s a example entity
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,17 @@
+contact_entity.settings_form:
+  title: 'Contact entity'
+  description: 'Configure Contact entity.'
+  parent: system.admin_config_system
+  route_name: contact_entity.settings_form
+  weight: 10
+
+entity.contact_entity.settings:
+  title: 'Contact entity'
+  description: 'Configure a Contact entity entity type.'
+  route_name:  entity.contact_entity.settings
+  parent: system.admin_structure
+entity.contact_entity.collection:
+  title: 'Contact entities'
+  description: 'List of contact entities.'
+  route_name: entity.contact_entity.collection
+  parent: system.admin_content

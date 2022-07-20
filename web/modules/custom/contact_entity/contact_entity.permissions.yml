@@ -1,0 +1,16 @@
+administer contact_entity configuration:
+  title: 'Administer contact_entity configuration'
+  description: 'Optional description.'
+  restrict access: true
+
+administer contact entity:
+  title: 'Administer contact entity settings'
+  restrict access: true
+delete contact entity:
+  title: Delete contact entity
+create contact entity:
+  title: Create contact entity
+view contact entity:
+  title: View contact entity
+edit contact entity:
+  title: Edit contact entity
