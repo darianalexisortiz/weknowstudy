@@ -43,7 +43,7 @@ function weknowtheme_preprocess_node(&$variables)
   if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
     $variables['current_user_is_owner'] = TRUE;
   }
-  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id() && theme_get_setting('isuserauthor')) {
     $variables['content']['body']['#suffix'] =' [you are the author]';
   }
 
@@ -70,4 +70,26 @@ function weknowtheme_theme_suggestions_node_alter(array &$suggestions, array $va
   if ($logged_in) {
     $suggestions[] = 'node__' . 'authenticated';
   }
+}
+function weknowtheme_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  $form['weknowtheme'] = [
+    '#type' => 'details',
+    '#title' => t('weKnow theme'),
+    '#open' => TRUE,
+  ];
+
+  $form['weknowtheme']['font_size'] = [
+    '#type' => 'number',
+    '#title' => t('Font size'),
+    '#min' => 12,
+    '#max' => 18,
+    '#default_value' => theme_get_setting('font_size'),
+  ];
+  // Add a checkbox to toggle the breadcrumb trail.
+  $form['weknowtheme']['toggle_breadcrumb'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Display if user is the author'),
+    '#default_value' => theme_get_setting('isuserauthor'),
+  ];
 }

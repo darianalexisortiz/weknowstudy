@@ -8,7 +8,7 @@
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
-function weknowtheme_form_system_theme_settings_alter(&$form, &$form_state) {
+/* function weknowtheme_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $form['weknowtheme'] = [
     '#type' => 'details',
@@ -24,4 +24,4 @@ function weknowtheme_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => theme_get_setting('font_size'),
   ];
 
-}
+} */
