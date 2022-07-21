@@ -13,15 +13,24 @@ class ContactEntityController extends ControllerBase {
    * Builds the response.
    */
   public function build() {
-/*     $entity_type = 'node';
-    $node = \Drupal::service('entity_type.manager')->getStorage($entity_type);
-    $node_4 = $service->load(4);
+    $entity_type = 'node';
+    $service_node = \Drupal::service('entity_type.manager')->getStorage($entity_type);
+    $node_4 = $service_node->load(4);
     $nodes = \Drupal::entityTypeManager()->getStorage($entity_type)->loadMultiple([4, 11, 10]);
     $node = \Drupal::entityTypeManager()->getStorage('node')->create(['type' => 'vendor', 'title' => 'Test API']);
-    $node->save(); */
-    $build['content'] = [
+/*    $node->save(); */
+    $build['node4'] = [
       '#type' => 'item',
-      '#markup' => $this->t('It works!'),
+      '#markup' => $this->t('Title node ID 4: ') . $node_4->get('title')->value,
+    ];
+    $titles_nodes = [];
+    foreach ($nodes as $key => $value) {
+      $titles_nodes[] = $value->get('title')->value;
+    }
+
+    $build['multiplenode'] = [
+      '#type' => 'item',
+      '#markup' => $this->t('Titles nodes IDs 4, 11 and 10: ' . implode(', ', $titles_nodes)),
     ];
 
     return $build;
