@@ -33,6 +33,18 @@ class ContactEntityController extends ControllerBase {
       '#markup' => $this->t('Titles nodes IDs 4, 11 and 10: ' . implode(', ', $titles_nodes)),
     ];
 
+    $query = \Drupal::entityQuery('node');
+    $vendors_ids = $query
+    ->condition('type', 'vendor')
+    ->condition('status', 1)
+    ->execute();
+
+    foreach ($nodes as $key => $value) {
+      $build['vendor' . $key] = [
+        '#type' => 'item',
+        '#markup' => $this->t('Label') . ' ' . $key . ': ' . $value->label(),
+      ];
+    }
     return $build;
   }
 
