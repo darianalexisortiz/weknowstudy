@@ -49,6 +49,7 @@ use Drupal\contact_entity\ContactEntityInterface;
  *     "uuid" = "uuid",
  *   },
  *   revision_metadata_keys = {
+ *     "revision_user" = "revision_user",
  *     "revision_created" = "revision_timestamp",
  *     "revision_log_message" = "revision_log",
  *   },
