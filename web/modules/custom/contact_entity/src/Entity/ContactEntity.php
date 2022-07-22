@@ -157,6 +157,7 @@ class ContactEntity extends RevisionableContentEntityBase implements ContactEnti
         'type' => 'number',
         'weight' => 20,
       ]);
+
     return $fields;
   }
 

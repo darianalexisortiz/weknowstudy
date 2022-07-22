@@ -10,7 +10,12 @@ function contact_entity_entity_load(array $entities, $entity_type_id) {
     if ($entity_type_id === 'contact_entity') {
       $label = $entity->label->value;
       \Drupal::messenger()->addStatus(t('Entity with the name is loaded ' . $label));
+      $listDefinition = \Drupal::typedDataManager()->createListDataDefinition('string');
+    $list = \Drupal::typedDataManager()->create($listDefinition, ['blake@drupalize.me', 'support@example.com', 'noreply@example.com']);
+    $serializer = \Drupal::service('serializer');
+    \Drupal::messenger()->addStatus(t('Example list definitions ') . $serializer->serialize($list, 'json'));
     }
+
   }
 }
 
