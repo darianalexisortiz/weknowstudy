@@ -4,3 +4,67 @@
  * @file
  * Primary module hooks for Contact entity module.
  */
+
+function contact_entity_entity_load(array $entities, $entity_type_id) {
+  foreach ($entities as $entity) {
+    if ($entity_type_id === 'contact_entity') {
+      $label = $entity->label->value;
+      \Drupal::messenger()->addStatus(t('Entity with the name is loaded ' . $label));
+    }
+  }
+}
+
+function contact_entity_entity_storage_load(array $entities, $entity_type) {
+  if ($entity_type == 'contact_entity') {
+    foreach ($entities as $entity) {
+      $label = $entity->label->value;
+      \Drupal::messenger()->addStatus(t('Entity in storage with the name is loaded ' . $label));
+    }
+  }
+}
+
+function contact_entity_entity_preload(array $ids, $entity_type_id) {
+  if ($entity_type_id == 'contact_entity') {
+    $entities = [];
+    foreach ($ids as $id) {
+      $entities[] = $id;
+    }
+  }
+}
+/*
+function contact_entity_entity_prepare_view($entity_type_id, array $entities, array $displays, $view_mode) {
+  if (!empty($entities) && $entity_type_id == 'contact_entity') {
+    $ids = array();
+    foreach ($entities as $id => $entity) {
+      if ($displays[$entity->bundle()]->getComponent('mymodule_addition')) {
+        $ids[] = $id;
+      }
+    }
+     if ($ids) {
+      $nodes = mymodule_get_user_nodes($ids);
+      foreach ($ids as $id) {
+        $entities[$id]->user_node = $nodes[$id];
+      }
+    }
+  }
+} */
+
+function contact_entity_contact_entity_prepare_form(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Form\FormStateInterface $form_state) {
+  if ($operation == 'edit') {
+    $entity->label->value = 'Altered label';
+    $form_state->set('label_altered', TRUE);
+  }
+}
+
+// Change the user interface label for user accounts to 'Full account'.
+function contact_entity_entity_bundle_info_alter(&$bundles) {
+  $bundles['user']['user']['label'] = t('Full account');
+}
+
+
+/* function contact_entity_entity_bundle_field_info_alter(&$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
+   if ($entity_type->id() == 'contact_entity' && $bundle == 'contact_entity' && !empty($fields['number'])) {
+    // Alter the mymodule_text field to use a custom class.
+    $fields['number']->addConstraint('unique_integer');
+  }
+} */

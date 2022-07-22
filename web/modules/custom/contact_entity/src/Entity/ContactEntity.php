@@ -136,6 +136,27 @@ class ContactEntity extends RevisionableContentEntityBase implements ContactEnti
       ->setTranslatable(TRUE)
       ->setDescription(t('The time that the contact entity was last edited.'));
 
+
+    $fields['mail'] = BaseFieldDefinition::create('email')
+      ->setLabel(t('Email'))
+      ->setDescription(t('The email of this user.'))
+      ->setDefaultValue('')
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->addConstraint('UserMailUnique')
+      ->addConstraint('UserMailRequired')
+      ->addConstraint('ProtectedUserField');
+
+    $fields['number'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('Number'))
+      ->setDescription(t('The example field number.'))
+      ->setDefaultValue('')
+      ->setDisplayOptions('form', [
+        'type' => 'number',
+        'weight' => 20,
+      ]);
     return $fields;
   }
 
