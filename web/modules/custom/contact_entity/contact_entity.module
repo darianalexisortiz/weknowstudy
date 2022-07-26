@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
 /**
  * @file
  * Primary module hooks for Contact entity module.
@@ -15,8 +18,27 @@ function contact_entity_entity_load(array $entities, $entity_type_id) {
     $serializer = \Drupal::service('serializer');
     \Drupal::messenger()->addStatus(t('Example list definitions ') . $serializer->serialize($list, 'json'));
     }
-
   }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function contact_entity_contact_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Count the number of times the current contact_entity has been viewed this session.
+  $session = \Drupal::request()->getSession();
+  $current_counts = $session->get('contact_entity.view_counts', array());
+  if (!isset($current_counts[$entity->id()])) {
+    $current_counts[$entity->id()] = 1;
+  }
+  else {
+    $current_counts[$entity->id()]++;
+  }
+  $session->set('contact_entity.view_counts', $current_counts);
+
+  $module_handler = \Drupal::moduleHandler();
+  $module_handler->invokeAll('contact_entity_count_incremented', array($current_counts[$entity->id()], $entity));
+  $module_handler->alter('contact_entity_count_incremented', $current_counts);
 }
 
 function contact_entity_entity_storage_load(array $entities, $entity_type) {
@@ -67,9 +89,10 @@ function contact_entity_entity_bundle_info_alter(&$bundles) {
 }
 
 
-/* function contact_entity_entity_bundle_field_info_alter(&$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
-   if ($entity_type->id() == 'contact_entity' && $bundle == 'contact_entity' && !empty($fields['number'])) {
-    // Alter the mymodule_text field to use a custom class.
-    $fields['number']->addConstraint('unique_integer');
-  }
-} */
+/**
+ * Implements hook_contact_entity_count_incremented().
+ */
+function contact_entity_contact_entity_count_incremented($count, $entity) {
+  $messenger = \Drupal::messenger();
+  $messenger->addStatus(t('This is the first time you have viewed the contact entity %count.', array('%count' => $count, '%title' => $entity->label())));
+}

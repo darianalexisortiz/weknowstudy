@@ -14,3 +14,7 @@ view contact entity:
   title: View contact entity
 edit contact entity:
   title: Edit contact entity
+
+permission_callbacks:
+  - \Drupal\node\NodePermissions::nodeTypePermissions
+  - \Drupal\contact_entity\Entity

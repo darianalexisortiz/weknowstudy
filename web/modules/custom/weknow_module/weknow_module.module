@@ -18,3 +18,17 @@ function weknow_module_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+/**
+ * Implements hook_contact_entity_count_incremented().
+ */
+function weknow_module_contact_entity_count_incremented($count, $entity) {
+  $messenger = \Drupal::messenger();
+  $messenger->addStatus(t('Dos This is the first time you have viewed the contact entity %count.', array('%count' => $count, '%title' => $entity->label())));
+}
+/**
+ * Implements hook_contact_entity_count_incremented_alter().
+ */
+function weknow_module_contact_entity_count_incremented_alter(&$current_counts) {
+    $current_counts[] = $current_counts[1] - 5;
+}
