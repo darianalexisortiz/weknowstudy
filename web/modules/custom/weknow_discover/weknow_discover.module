@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Weknow discover module.
+ */
+
+/**
+ * Implements hook_weknow_discover_hook_info().
+ */
+function weknow_discover_weknow_discover_hook_info() {
+  return [
+    'foo' => [
+      'id' => 'foo',
+      'label' => t('Foo'),
+      'description' => t('Foo description.'),
+    ],
+    'bar' => [
+      'id' => 'bar',
+      'label' => t('Bar'),
+      'description' => t('Bar description.'),
+    ],
+  ];
+}

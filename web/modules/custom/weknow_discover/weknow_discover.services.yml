@@ -1,0 +1,12 @@
+services:
+  plugin.manager.weknow_discover_annotation:
+    class: Drupal\weknow_discover\WeknowDiscoverAnnotationPluginManager
+    parent: default_plugin_manager
+
+  plugin.manager.weknow_discover_yaml:
+    class: Drupal\weknow_discover\WeknowDiscoverYamlPluginManager
+    arguments: ['@module_handler', '@cache.discovery']
+
+  plugin.manager.weknow_discover_hook:
+    class: Drupal\weknow_discover\WeknowDiscoverHookPluginManager
+    arguments: ['@module_handler', '@cache.discovery']

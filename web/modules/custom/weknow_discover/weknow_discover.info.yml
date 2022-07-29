@@ -1,0 +1,5 @@
+name: weKnow discover
+type: module
+description: Experimenting with plugins and discovers
+package: weKnow
+core_version_requirement: ^9 || ^10
