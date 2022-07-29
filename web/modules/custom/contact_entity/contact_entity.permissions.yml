@@ -17,4 +17,3 @@ edit contact entity:
 
 permission_callbacks:
   - \Drupal\node\NodePermissions::nodeTypePermissions
-  - \Drupal\contact_entity\Entity
