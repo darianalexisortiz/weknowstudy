@@ -1,0 +1,6 @@
+services:
+  weknow_services.event_subscriber:
+    class: Drupal\weknow_services\EventSubscriber\WeknowServicesSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

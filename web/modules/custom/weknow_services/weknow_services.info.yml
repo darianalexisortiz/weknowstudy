@@ -1,0 +1,5 @@
+name: weKnow services
+type: module
+description: Service sample tests
+package: weKnow
+core_version_requirement: ^9 || ^10

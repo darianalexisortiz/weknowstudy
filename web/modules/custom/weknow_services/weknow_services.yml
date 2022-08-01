@@ -1,0 +1,8 @@
+# Define a route for our event dispatching example.
+weknow_services.description:
+  path: '/events/example'
+  defaults:
+    _form: '\Drupal\weknow_services\Form\EventsExampleForm'
+    _title: 'Events Example'
+  requirements:
+    _permission: 'access content'
