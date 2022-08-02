@@ -1,0 +1,52 @@
+# Simple link.
+weknow_module.example_page:
+  title: Page example
+  description: Page example.
+  menu_name: main
+  route_name: weknow_module.example
+  weight: 10
+  expanded: TRUE
+
+# Simple link.
+weknow_module.example_page_translate:
+  title: Page example translate
+  description: Page example.
+  menu_name: main
+  parent: weknow_module.example_page_translate
+  route_name: weknow_module.translate
+  weight: 10
+
+# Simple link.
+weknow_module.node_add:
+  title: Add content
+  description: Add new content.
+  menu_name: main
+  route_name: node.add_page
+  weight: 10
+
+# Child link.
+weknow_module.node_add_article:
+  title: Add recipe
+  menu_name: main
+  parent: weknow_module.node_add
+  route_name: node.add
+  route_parameters:
+    node_type: recipe
+  weight: 20
+
+# Dynamic link.
+weknow_module.user:
+  menu_name: main
+  class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
+  weight: 30
+
+# External link.
+weknow_module.drupal.org:
+  title: Drupal.org
+  description: Drupal is an open source platform for building amazing digital experiences.
+  url: https://www.drupal.org
+  menu_name: main
+  weight: 40
+  options:
+    attributes:
+      target: _blank
