@@ -6,6 +6,13 @@ weknow_module.example:
   requirements:
     _permission: 'access content'
 
+weknow_module.translate:
+  path: '/weknow-module/translate'
+  defaults:
+    _title: 'Example translate'
+    _controller: '\Drupal\weknow_module\Controller\WeknowModuleControllerTranslate::build'
+  requirements:
+    _permission: 'access content'
 
 weknow_module.dependent_dropdown:
   path: '/weknow-module/dependent-dropdown'
