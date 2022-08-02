@@ -1,0 +1,10 @@
+weknow_module.add_vendor:
+  route_name: node.add
+  route_parameters:
+    node_type: vendor
+  options:
+    attributes: {target: _blank}
+  title: Add vendor
+  weight: 10
+  appears_on:
+    - system.admin_content

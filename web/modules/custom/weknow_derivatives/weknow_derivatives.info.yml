@@ -1,5 +1,5 @@
 name: weKnow derivatives
 type: module
 description: An example of derivatives with nodes and blocks
-package: weknow
+package: weKnow
 core_version_requirement: ^9 || ^10

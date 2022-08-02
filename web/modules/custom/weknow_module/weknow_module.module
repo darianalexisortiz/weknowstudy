@@ -32,3 +32,26 @@ function weknow_module_contact_entity_count_incremented($count, $entity) {
 function weknow_module_contact_entity_count_incremented_alter(&$current_counts) {
     $current_counts[] = $current_counts[1] - 5;
 }
+
+function weknow_module_menu_links_discovered_alter(&$links) {
+
+  $l = $links;
+  // Change the weight and title of the user.logout link.
+ // $links['user.logout']['weight'] = -10;
+ // $links['user.logout']['title'] = 'hola';// new \Drupal\Core\StringTranslation\TranslatableMarkup('Logout');
+  // Conditionally add an additional link with a title that's not translated.
+/*   if (\Drupal::moduleHandler()->moduleExists('search')) {
+     $links['example_page_translate'] = array(
+      'title' => \Drupal::config('system.site')->get('name'),
+      'route_name' => 'weknow_module.example_page_translate',
+      'menu_name' => 'main',
+      'description' => new \Drupal\Core\StringTranslation\TranslatableMarkup('View popular search phrases for this site.'),
+    );
+  } */
+}
+
+function weknow_module_menu_local_actions_alter(&$local_actions) {
+  if (array_key_exists('weknow_module.add_vendor', $local_actions)) {
+    $local_actions["weknow_module.add_vendor"]["title"] = 'Other title add vendor';
+  }
+}
