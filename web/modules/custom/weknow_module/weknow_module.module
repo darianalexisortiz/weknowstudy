@@ -5,6 +5,8 @@
  * Primary module hooks for AweKnow module module.
  */
 
+use Drupal\Core\Url;
+
  /**
  * Implements hook_theme().
  */
@@ -63,7 +65,7 @@ $g = $group;
     // Dynamically use the menu name for the title of the menu_edit contextual
     // link.
     $menu = \Drupal::entityTypeManager()->getStorage('menu')->load($route_parameters['menu']);
-    $links['menu_edit']['title'] = t('Edit menu: @label', array('@label' => $menu->label()));
+    $links['entity.menu.edit_form']['title'] = t('Edit menu: @label', array('@label' => $menu->label()));
   }
 }
 
@@ -72,3 +74,4 @@ function weknow_module_contextual_links_view_alter(&$element, $items) {
   // styling.
   $element['#attributes']['class'][] = 'custom-class';
 }
+
