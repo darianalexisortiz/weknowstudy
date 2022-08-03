@@ -1,3 +1,48 @@
+  /* Loading animation CSS */
+  @keyframes pulse-throbber {
+    0% {
+      opacity: 1;
+      transform: scaley(1);
+    }
 
+    100% {
+      opacity: 0.2;
+      transform: scaley(0.5);
+    }
+  }
+
+  [data-big-pipe-placeholder-id] {
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    width: 6px;
+    height: 30px;
+    background: rebeccaPurple;
+    animation: pulse-throbber 0.2s infinite;
+    animation-delay: 0.0666666667s;
+    animation-direction: alternate;
+  }
+
+  [data-big-pipe-placeholder-id]:before,
+  [data-big-pipe-placeholder-id]:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rebeccaPurple;
+    top: 0;
+    animation: pulse-throbber 0.2s infinite;
+    animation-direction: alternate;
+  }
+
+  [data-big-pipe-placeholder-id]:before {
+    left: -12px;
+  }
+
+  [data-big-pipe-placeholder-id]:after {
+    left: 12px;
+    animation-delay: 0.1333333333s;
+  }
 
 /*# sourceMappingURL=elements.css.map */

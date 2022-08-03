@@ -3,8 +3,8 @@ global:
   js:
     js/weknowtheme.js: {}
   css:
-#    base:
-#      css/base/elements.css: {}
+    base:
+      css/base/elements.css: {}
     component:
 #      css/components/block.css: {}
 #      css/components/breadcrumb.css: {}
