@@ -54,4 +54,21 @@ function weknow_module_menu_local_actions_alter(&$local_actions) {
   if (array_key_exists('weknow_module.add_vendor', $local_actions)) {
     $local_actions["weknow_module.add_vendor"]["title"] = 'Other title add vendor';
   }
+
+}
+
+function weknow_module_contextual_links_alter(array &$links, $group, array $route_parameters) {
+$g = $group;
+  if ($group == 'menu') {
+    // Dynamically use the menu name for the title of the menu_edit contextual
+    // link.
+    $menu = \Drupal::entityTypeManager()->getStorage('menu')->load($route_parameters['menu']);
+    $links['menu_edit']['title'] = t('Edit menu: @label', array('@label' => $menu->label()));
+  }
+}
+
+function weknow_module_contextual_links_view_alter(&$element, $items) {
+  // Add another class to all contextual link lists to facilitate custom
+  // styling.
+  $element['#attributes']['class'][] = 'custom-class';
 }
