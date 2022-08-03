@@ -39,17 +39,16 @@ function weknow_module_menu_links_discovered_alter(&$links) {
 
   $l = $links;
   // Change the weight and title of the user.logout link.
- // $links['user.logout']['weight'] = -10;
- // $links['user.logout']['title'] = 'hola';// new \Drupal\Core\StringTranslation\TranslatableMarkup('Logout');
+  $links["user.page"]["title"] = new \Drupal\Core\StringTranslation\TranslatableMarkup('User account');
   // Conditionally add an additional link with a title that's not translated.
-/*   if (\Drupal::moduleHandler()->moduleExists('search')) {
+   if (\Drupal::moduleHandler()->moduleExists('weknow_module')) {
      $links['example_page_translate'] = array(
       'title' => \Drupal::config('system.site')->get('name'),
-      'route_name' => 'weknow_module.example_page_translate',
+      'route_name' => 'weknow_module.translate',
       'menu_name' => 'main',
-      'description' => new \Drupal\Core\StringTranslation\TranslatableMarkup('View popular search phrases for this site.'),
+      'description' => new \Drupal\Core\StringTranslation\TranslatableMarkup('View examples translates page.'),
     );
-  } */
+  }
 }
 
 function weknow_module_menu_local_actions_alter(&$local_actions) {
@@ -60,7 +59,6 @@ function weknow_module_menu_local_actions_alter(&$local_actions) {
 }
 
 function weknow_module_contextual_links_alter(array &$links, $group, array $route_parameters) {
-$g = $group;
   if ($group == 'menu') {
     // Dynamically use the menu name for the title of the menu_edit contextual
     // link.
@@ -75,3 +73,19 @@ function weknow_module_contextual_links_view_alter(&$element, $items) {
   $element['#attributes']['class'][] = 'custom-class';
 }
 
+function  weknow_module_menu_local_tasks_alter(&$data, $route_name) {
+
+  // Add a tab linking to node/add to all pages.
+  $data['tabs'][0]['node.add_page'] = array(
+    '#theme' => 'menu_local_task',
+    '#link' => array(
+      'title' => t('Add content'),
+      'url' => Url::fromRoute('node.add_page'),
+      'localized_options' => array(
+        'attributes' => array(
+          'class' => array('example-tab'),
+        ),
+      ),
+    ),
+  );
+}
