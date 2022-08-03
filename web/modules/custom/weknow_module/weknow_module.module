@@ -36,8 +36,6 @@ function weknow_module_contact_entity_count_incremented_alter(&$current_counts) 
 }
 
 function weknow_module_menu_links_discovered_alter(&$links) {
-
-  $l = $links;
   // Change the weight and title of the user.logout link.
   $links["user.page"]["title"] = new \Drupal\Core\StringTranslation\TranslatableMarkup('User account');
   // Conditionally add an additional link with a title that's not translated.
