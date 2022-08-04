@@ -46,7 +46,49 @@ class WeknowModuleControllerRender extends ControllerBase {
         'data-name' => isset($value) ? $value : 'Alice',
       ],
     ];
+    $build['list'] = [
+      '#theme' => 'item_list',
+      '#items' => [
+        $this->t('This is some text that should be put in a list'),
+        $this->t('This is some more text that we need in the list'),
+      ],
+    ];
+    $items = array();
+    // A simple string item.
+    $items[] = 'Simple string';
 
+    // A simple string item as render array.
+    $items[] = [
+      '#markup' => 'Simple <span>#markup</span> string',
+    ];
+
+    // Set custom attributes for a list item.
+    $items[] = [
+      '#markup' => 'Custom item',
+      '#wrapper_attributes' => array(
+        'class' => array('custom-item-class'),
+      ),
+    ];
+
+    // An item with a nested list.
+    $items[] = [
+      '#markup' => 'Parent item',
+      'children' => [
+        'Simple string child',
+        [
+          '#markup' => 'Second child item with custom attributes',
+          '#wrapper_attributes' => [
+            'class' => array('custom-child-item-class'),
+          ],
+        ],
+      ],
+    ];
+
+    $build['theme_element'] = [
+      '#theme' => 'item_list',
+      '#title' => $this->t('Example of using #theme item_list'),
+      '#items' => $items,
+    ];
     return $build;
   }
 }
