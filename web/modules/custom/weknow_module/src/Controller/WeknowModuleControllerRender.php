@@ -12,8 +12,9 @@ class WeknowModuleControllerRender extends ControllerBase {
   /**
    * Builds the response.
    */
-  public function build()
-  {
+  public function build() {
+    $current_user = \Drupal::currentUser();
+
     $build['simple_text'] = [
       '#plain_text' => '<em>This is escaped</em>',
     ];
@@ -35,6 +36,15 @@ class WeknowModuleControllerRender extends ControllerBase {
       '#markup' => '<p>' . $this->t('This one adds a prefix and suffix, wrapping the item in a blockquote tag.') . '</p>',
       '#prefix' => '<blockquote>',
       '#suffix' => '</blockquote>',
+    ];
+    $build['name'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Name'),
+      '#default_value' => isset($value) ? $value : 'Alice',
+      '#attributes' => [
+        'class' => ['name', 'custom-class'],
+        'data-name' => isset($value) ? $value : 'Alice',
+      ],
     ];
 
     return $build;

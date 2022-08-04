@@ -62,14 +62,6 @@ class WeknowModuleControllerCache extends ControllerBase {
       ],
     ];
 
-/*     $build['lazy1'] = [
-      '#lazy_builder' => [
-        // Function or method to call.
-        $this::class . '::lazyDateFormat',
-        ['Y-m-d']
-      ]
-    ]; */
-
     return $build;
   }
 }
