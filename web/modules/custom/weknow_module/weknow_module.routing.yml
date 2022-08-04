@@ -14,6 +14,32 @@ weknow_module.translate:
   requirements:
     _permission: 'access content'
 
+weknow_module.cache:
+  path: '/weknow-module/cache'
+  defaults:
+    _title: 'Example cache'
+    _controller: '\Drupal\weknow_module\Controller\WeknowModuleControllerCache::build'
+  requirements:
+    _permission: 'access content'
+
+weknow_module.render:
+  path: '/weknow-module/render'
+  defaults:
+    _title: 'Example Render'
+    _controller: '\Drupal\weknow_module\Controller\WeknowModuleControllerRender::build'
+  requirements:
+    _permission: 'access content'
+
+weknow_module.lazybuilder:
+  path: '/weknow-module/lazybuilder'
+  defaults:
+    _title: 'Example Lazy Builder'
+    _controller: '\Drupal\weknow_module\Controller\WeknowModuleControllerLazybuilder::arrays'
+  requirements:
+    _permission: 'access content'
+
+
+
 weknow_module.dependent_dropdown:
   path: '/weknow-module/dependent-dropdown'
   defaults:

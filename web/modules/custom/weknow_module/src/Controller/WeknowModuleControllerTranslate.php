@@ -5,7 +5,7 @@ namespace Drupal\weknow_module\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Returns responses for AweKnow module routes.
+ * Returns responses for weKnow module routes.
  */
 class WeknowModuleControllerTranslate extends ControllerBase {
 

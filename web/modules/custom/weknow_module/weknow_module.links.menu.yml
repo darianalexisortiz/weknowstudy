@@ -10,7 +10,31 @@ weknow_module.example_page:
 # Simple link.
 weknow_module.example_page_translate:
   title: Page example translate
-  description: Page example.
+  description: Page example translate.
   parent: weknow_module.example_page
   route_name: weknow_module.translate
   weight: 10
+
+# Cache link.
+weknow_module.example_page_cache:
+  title: Page example cache
+  description: Page example cache.
+  route_name: weknow_module.cache
+  weight: 15
+  menu_name: main
+
+# Render link.
+weknow_module.example_page_render:
+  title: Page example render
+  description: Page example render.
+  route_name: weknow_module.render
+  weight: 16
+  menu_name: main
+
+# LazyBuilder link.
+weknow_module.example_page_lazybuilder:
+  title: Page example LazyBuilder
+  description: Page example Lazybuilder.
+  route_name: weknow_module.lazybuilder
+  weight: 16
+  menu_name: main
