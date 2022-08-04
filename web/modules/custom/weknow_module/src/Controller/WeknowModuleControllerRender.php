@@ -87,6 +87,7 @@ class WeknowModuleControllerRender extends ControllerBase {
     $build['theme_element'] = [
       '#theme' => 'item_list',
       '#title' => $this->t('Example of using #theme item_list'),
+      '#list_type' => 'ol',
       '#items' => $items,
     ];
     return $build;
