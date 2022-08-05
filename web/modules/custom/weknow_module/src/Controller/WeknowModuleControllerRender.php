@@ -235,20 +235,20 @@ class WeknowModuleControllerRender extends ControllerBase {
         'weight' => ['#type' => 'weight', '#title_display' => 'invisible', '#default_value' => 5, '#attributes' => ['class' => ['table-order-weight']]],
       ],
     ];
-    $build['marquee'] = [
+    $build['marqueeright'] = [
       '#theme' => 'render_example_marquee',
-      '#content' => $this->t('Hello world!'),
+      '#content' => $this->t('Hello world toward the right!'),
       '#attributes' => [
-        'class' => ['my-marquee-element'],
+        'class' => ['my-marquee-element-right'],
         'direction' => 'right',
       ],
     ];
-    $build['marquee'] = [
+    $build['marqueeleft'] = [
       '#theme' => 'render_example_marquee',
-      '#content' => $this->t('Hello world!'),
+      '#content' => $this->t('Hello world toward the left!'),
       '#attributes' => [
-        'class' => ['my-marquee-element'],
-        'direction' => 'right',
+        'class' => ['my-marquee-element-left'],
+        'direction' => 'left',
       ],
     ];
 
