@@ -5,6 +5,8 @@
  * Primary module hooks for AweKnow module module.
  */
 
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Url;
 
@@ -102,4 +104,17 @@ function template_preprocess_render_example_marquee(&$variables) {
   $variables['direction'] = $variables['attributes']['direction'];
   // Convert attributes to a proper \Drupal\Core\Template\Attribute object.
   $variables['attributes'] = new Attribute($variables['attributes']);
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function weknow_module_node_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if ($entity->bundle() == 'recipe') {
+    // Get the currently active user.
+    $current_user = Drupal::currentUser();
+    // Check to see if the user has the 'administer content' permission. The
+    // hasPermission() method returns a Boolean value.
+    $build['field_submitted_by']['#access'] = $current_user->hasPermission('access user profiles');
+  }
 }
