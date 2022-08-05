@@ -5,6 +5,7 @@
  * Primary module hooks for AweKnow module module.
  */
 
+use Drupal\Core\Template\Attribute;
 use Drupal\Core\Url;
 
  /**
@@ -16,6 +17,12 @@ function weknow_module_theme($existing, $type, $theme, $path) {
       'variables' => [
         'form_link1' => NULL,
         'form_link2' => NULL
+      ],
+    ],
+    'render_example_marquee' => [
+      'variables' => [
+        'content' => '',
+        'attributes' => array(),
       ],
     ],
   ];
@@ -86,4 +93,13 @@ function  weknow_module_menu_local_tasks_alter(&$data, $route_name) {
       ),
     ),
   );
+}
+
+function template_preprocess_render_example_marquee(&$variables) {
+  // The $variables array contains the same keys as in the hook_theme() implementation
+  // by default. Any new values added will be new variables available in the
+  // template file.
+  $variables['direction'] = $variables['attributes']['direction'];
+  // Convert attributes to a proper \Drupal\Core\Template\Attribute object.
+  $variables['attributes'] = new Attribute($variables['attributes']);
 }
