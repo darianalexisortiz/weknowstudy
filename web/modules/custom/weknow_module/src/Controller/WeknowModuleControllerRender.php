@@ -254,6 +254,20 @@ class WeknowModuleControllerRender extends ControllerBase {
       ],
     ];
 
+    $build['awesome'] = [
+      '#type' => 'marquee',
+      '#theme' => 'render_example_marquee',
+      '#content' => 'Whoa cool, a marquee!',
+      '#attributes' => [
+        'scrollamount' => 'random',
+        'direction' => 'right',
+        'scrolldelay' => 5
+      ],
+      '#pre_render' => array(
+        array('\Drupal\weknow_module\Element\Marquee', 'preRenderMarquee'),
+      ),
+    ];
+
     $build['node_add_dialog'] = [
       '#type' => 'link',
       '#title' => $this->t('Some text'),
