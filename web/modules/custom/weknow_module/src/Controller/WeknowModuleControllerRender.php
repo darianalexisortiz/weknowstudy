@@ -4,6 +4,7 @@ namespace Drupal\weknow_module\Controller;
 
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Link;
 use Drupal\Core\Url;
 
 /**
@@ -296,6 +297,124 @@ class WeknowModuleControllerRender extends ControllerBase {
       '#attached' => ['library' => ['core/drupal.dialog.ajax']],
     ];
 
+    $build['titlelinks'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'h2',
+      '#value' => 'Links',
+    ];
+
+    $build['link1routerinternal'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'URL internal',
+      '#value' => Url::fromRoute('weknow_module.render')->toString(),
+    ];
+
+    $build['link1routerexternal'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'URL external',
+      '#value' => Url::fromUri('http://example.com')->toString(),
+    ];
+
+    // Link to an internal path defined by a route.
+    $link2internal = Link::createFromRoute('This is a link', 'entity.node.canonical', ['node' => 42]);
+
+    // Link to an external URI.
+    $link2external = Link::fromTextAndUrl('This is a link', Url::fromUri('http://example.com'));
+
+    // Get output as a render array. Preferred.
+    $build['link2internal'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Link internal',
+      '#value' => $link2internal->toString(),
+    ];
+
+    $build['link2routerinternalarray'] = $link2internal->toRenderable();
+    // Get output as a string.
+    $build['link2routerexternal'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => '<br>Link external',
+      '#value' => $link2external->toString(),
+    ];
+    $build['link3'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Example using an external URI',
+      '#value' => Url::fromUri('https://drupal.org/about')->toString(),
+    ];
+    $build['link4'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Example using an un-routed internal URI',
+      '#value' => Url::fromUri('base:/robots.txt')->toString(),
+    ];
+    $build['link5'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Example using user-input for an internal path',
+      '#value' => Url::fromUri('internal:/weknow-module/render')->toString(),
+    ];
+    $build['link6'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Example using entity scheme',
+      '#value' => Url::fromUri('entity:node/12')->toString(),
+    ];
+    $build['link7'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'From route with additional parameters',
+      '#value' =>  Url::fromRoute('entity.node.canonical', ['node' => 12])->toString(),
+    ];
+    $options = ['fragment' => 'feedback'];
+    $build['link8'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Example linking to a page with a fragment appended',
+      '#value' =>  Url::fromRoute('entity.node.canonical', ['node' => 12], $options)->toString(),
+    ];
+    $options2 = ['query' => ['name' => 'joe', 'hats' => 'no']];
+    $build['link9'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Example linking to a page with a fragment appended',
+      '#value' =>  Url::fromRoute('entity.node.canonical', ['node' => 12], $options2)->toString(),
+    ];
+    $build['link10'] = [
+      '#type' => 'link',
+      '#prefix' => 'Render a link ',
+      '#title' => $this->t('A link to example.com'),
+      '#url' => Url::fromUri('https://example.com'),
+      '#suffix' => '<br>',
+    ];
+    $build['link11'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Examples of creating links',
+      '#value' =>  Link::createFromRoute('Text of the link', 'entity.node.canonical', ['node' => 12])->toString(),
+    ];
+    $urldrupalabout = Url::fromUri('https://drupal.org/about');
+
+    $build['link12'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Examples of creating links',
+      '#value' =>  Link::fromTextAndUrl('Text to display', $urldrupalabout)->toString(),
+    ];
+    $build['link13'] = Link::fromTextAndUrl('Text to display 2', $urldrupalabout)->toRenderable();
+    $build['link13']['#suffix'] = '<br>';
+    $build['link13']['#attributes'] = ['class' => ['my-link'], 'data-id' => 'uniqueid'];
+
+    $linkn = Link::fromTextAndUrl('This is a link', Url::fromRoute('entity.node.canonical', ['node' => 12]));
+    $build['link14'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#prefix' => 'Examples of creating links',
+      '#value' => t('You can click this %link', ['%link' => $linkn->toString()]),
+    ];
     return $build;
   }
 
