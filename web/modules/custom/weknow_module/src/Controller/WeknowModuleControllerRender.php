@@ -2,7 +2,9 @@
 
 namespace Drupal\weknow_module\Controller;
 
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Url;
 
 /**
  * Returns responses for weKnow module routes.
@@ -250,6 +252,34 @@ class WeknowModuleControllerRender extends ControllerBase {
         'class' => ['my-marquee-element-left'],
         'direction' => 'left',
       ],
+    ];
+
+    $build['node_add_dialog'] = [
+      '#type' => 'link',
+      '#title' => $this->t('Some text'),
+      // $this->getDestinationArray() is used to create a ?destination= style query
+      // string so that after a form is submitted in the modal you return to the
+      // current page.
+      '#url' => Url::fromRoute('node.add', ['node_type' => 'recipe'], ['query' => $this->getDestinationArray()]),
+      '#options' => [
+        'attributes' => [
+          // Adding the class 'use-ajax' tells the Drupal AJAX system to process
+          // this link, and bind an event handler so that when someone clicks on the
+          // link we make an AJAX request instead of just linking to the URL
+          // directly.
+          'class' => ['use-ajax'],
+          // This data attribute tells Drupal to use the ModalRenderer
+          // (application/vnd.drupal-modal) to handle this particular request rather
+          // then the normal MainContentRenderer.
+          'data-dialog-type' => 'modal',
+          // This contains settings to pass to the Drupal modal dialog JavaScript,
+          // in this case setting the width of the modal window that'll be opened.
+          'data-dialog-options' => Json::encode(['width' => 700]),
+        ],
+      ],
+      // In order for the above classes and data attributes to do anything we also
+      // need to attach the relevant JavaScript.
+      '#attached' => ['library' => ['core/drupal.dialog.ajax']],
     ];
 
     return $build;
