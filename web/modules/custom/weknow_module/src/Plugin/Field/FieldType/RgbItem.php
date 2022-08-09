@@ -16,7 +16,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   label = @Translation("Example Color RGB"),
  *   category = @Translation("General"),
  *   description = @Translation("Demonstrates a field composed of an RGB color."),
- *   default_widget = "field_example_text",
+ *   default_widget = "weknow_module_colorpicker",
  * )
  *
  * @DCG

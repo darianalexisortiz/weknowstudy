@@ -7,10 +7,10 @@ use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Defines the 'field_example_colorpicker' field widget.
+ * Defines the 'weknow_module_colorpicker' field widget.
  *
  * @FieldWidget(
- *   id = "field_example_colorpicker",
+ *   id = "weknow_module_colorpicker",
  *   label = @Translation("Color Picker"),
  *   field_types = {"field_example_rgb"},
  * )
