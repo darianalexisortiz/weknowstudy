@@ -17,7 +17,6 @@ use Drupal\Core\TypedData\DataDefinition;
  *   category = @Translation("General"),
  *   description = @Translation("Demonstrates a field composed of an RGB color."),
  *   default_widget = "field_example_text",
- *   default_formatter = "field_example_simple_text"
  * )
  *
  * @DCG
