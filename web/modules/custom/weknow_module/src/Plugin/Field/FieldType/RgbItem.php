@@ -2,8 +2,6 @@
 
 namespace Drupal\weknow_module\Plugin\Field\FieldType;
 
-use Drupal\Component\Utility\Random;
-use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\TypedData\DataDefinition;
@@ -17,6 +15,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   category = @Translation("General"),
  *   description = @Translation("Demonstrates a field composed of an RGB color."),
  *   default_widget = "weknow_module_colorpicker",
+ *   default_formatter = "field_example_simple_text"
  * )
  *
  * @DCG
@@ -59,6 +58,5 @@ class RgbItem extends FieldItemBase {
 
     return $properties;
   }
-
 
 }
