@@ -7,15 +7,15 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\TypedData\DataDefinition;
 
 /**
- * Defines the 'field_example_rgb' field type.
+ * Defines the 'weknow_module_rgb' field type.
  *
  * @FieldType(
- *   id = "field_example_rgb",
- *   label = @Translation("Example Color RGB"),
+ *   id = "weknow_module_rgb",
+ *   label = @Translation("weKnow Color RGB"),
  *   category = @Translation("General"),
  *   description = @Translation("Demonstrates a field composed of an RGB color."),
  *   default_widget = "weknow_module_colorpicker",
- *   default_formatter = "field_example_simple_text"
+ *   default_formatter = "weknow_module_simple_text"
  * )
  *
  * @DCG

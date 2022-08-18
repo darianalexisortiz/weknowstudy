@@ -14,7 +14,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   module = "weknow_module",
  *   label = @Translation("RGB text field"),
  *   field_types = {
- *     "field_example_rgb"
+ *     "weknow_module_rgb"
  *   }
  * )
  */

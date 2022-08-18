@@ -7,14 +7,14 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Plugin implementation of the 'field_example_color_background' formatter.
+ * Plugin implementation of the 'weknow_modulecolor_background' formatter.
  *
  * @FieldFormatter(
- *   id = "field_example_color_background",
+ *   id = "weknow_modulecolor_background",
  *   module = "weknow_module",
  *   label = @Translation("Change the background of the output text"),
  *   field_types = {
- *     "field_example_rgb"
+ *     "weknow_modulergb"
  *   }
  * )
  */

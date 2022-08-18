@@ -6,14 +6,14 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
 
 /**
- * Plugin implementation of the 'field_example_simple_text' formatter.
+ * Plugin implementation of the 'weknow_module_simple_text' formatter.
  *
  * @FieldFormatter(
- *   id = "field_example_simple_text",
+ *   id = "weknow_module_simple_text",
  *   module = "weknow_module",
  *   label = @Translation("Simple text-based formatter"),
  *   field_types = {
- *     "field_example_rgb"
+ *     "weknow_module_rgb"
  *   }
  * )
  */

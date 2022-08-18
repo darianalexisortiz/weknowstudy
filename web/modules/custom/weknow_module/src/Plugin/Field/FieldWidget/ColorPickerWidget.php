@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  * @FieldWidget(
  *   id = "weknow_module_colorpicker",
  *   label = @Translation("Color Picker"),
- *   field_types = {"field_example_rgb"},
+ *   field_types = {"weknow_module_rgb"},
  * )
  */
 class ColorPickerWidget extends WidgetBase {
