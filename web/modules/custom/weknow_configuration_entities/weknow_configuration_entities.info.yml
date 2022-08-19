@@ -1,0 +1,5 @@
+name: Weknow configuration entities
+type: module
+description: Practicing examples of configuration entities
+package: weKnow
+core_version_requirement: ^9 || ^10
